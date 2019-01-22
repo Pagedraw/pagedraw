@@ -3,7 +3,7 @@ Pagedraw
 
 Pagedraw is a UI builder for React web apps.  It works like a Sketch or Figma style design tool, but emits good quality JSX code.  You can play with a demo on the web without installing at [https://pagedraw.io/tutorials/basics](https://pagedraw.io/tutorials/basics).  See [https://pagedraw.io/](https://pagedraw.io/) for more info.
 
-You can download it at [https://github.com/Pagedraw/pagedraw/releases/download/1.0/Pagedraw.zip](https://github.com/Pagedraw/pagedraw/archive/1.0.zip).
+You can download it at [https://github.com/Pagedraw/pagedraw/releases/download/1.0/Pagedraw.zip](https://github.com/Pagedraw/pagedraw/releases/download/1.0/Pagedraw.zip).
 
 Pagedraw is not currently under development.  We do not recommend using it for production.  Please fork and use it for something cool!
 
