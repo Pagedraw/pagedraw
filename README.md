@@ -1,6 +1,26 @@
 Pagedraw
 ========
 
+Pagedraw is a UI builder for React web apps.  It works like a Sketch or Figma style design tool, but emits good quality JSX code.  You can play with a demo on the web without installing at [https://pagedraw.io/tutorials/basics](https://pagedraw.io/tutorials/basics).  See [https://pagedraw.io/](https://pagedraw.io/) for more info.
+
+You can download it at [https://github.com/Pagedraw/pagedraw/archive/1.0.zip](https://github.com/Pagedraw/pagedraw/archive/1.0.zip).
+
+Pagedraw is not currently under development.  Please fork and use it for something cool!
+
+
+## Usage
+
+See the structure of [https://github.com/pagedraw/sample-app](https://github.com/pagedraw/sample-app)
+
+Put a `main.pagedraw.json` in the root of your repo.  All files built by Pagedraw will be written into a `/src/pagedraw/` folder.  These are regular JSX/CSS files, so you can import them just like the rest of your code.
+
+If you ever want to stop using Pagedraw, just delete the source `*.pagedraw.json` files.  The generated files will still live in `src/pagedraw`, and you can treat them like any other code files.
+
+The editor itself is straightforward if you've used a design tool like Sketch or Figma.  Detailed documentation is available at [https://documentation.pagedraw.io/the-editor/](https://documentation.pagedraw.io/the-editor/).
+
+When you open Pagedraw for the first time, it will ask you to open a `.pagedraw.json` file.  If you'd like to create a new file, click cancel when it asks you to open a file, and it'll ask you where to create a new file.
+
+
 ## Developing
 
 ### Setting up the development environment
