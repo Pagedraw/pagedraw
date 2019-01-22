@@ -26,8 +26,7 @@ yarn devserver
 
 then start Electron with
 ```bash
-cd desktop-app/
-npm start
+yarn run-electron
 ```
 
 

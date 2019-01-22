@@ -17,8 +17,13 @@
   },
   "build": {
     "appId": "io.pagedraw.editor",
+    "files": [
+      "**/*",
+      "build/**/*"
+    ],
     "mac": {
-      "category": "your.app.category.type"
+      "category": "your.app.category.type",
+      "icon": "pagedraw-desktop-app-icon.icns"
     }
   },
   "dependencies": {

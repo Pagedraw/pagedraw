@@ -15,10 +15,6 @@ if window.process?.versions?.electron?
     window.document.body.classList.add('electron')
     window.Rollbar?.configure({payload: {client: {javascript: {browser: "Electron/1.0"}}}})
 
-# Turn on chaos mode if someone accesses pagedraw not from https://pagedraw.io and not from our
-# own development
-config.flashy = true if window.location.origin not in ['https://pagedraw.io', 'https://pagedraw.io.'] and config.environment == 'production'
-
 # be big meanies and not play nicely on all browsers
 browser = require('browser-detect')()
 window.pd_params.mobile = browser.mobile
