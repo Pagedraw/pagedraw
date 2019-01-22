@@ -1,0 +1,47 @@
+version: 2
+
+jobs:
+  test:
+    docker:
+      - image: pcstl/generic-node-8.9-ruby-2.3:0.1.3
+        environment:
+          RAILS_ENV: test
+          PGHOST: 127.0.0.1
+          PGUSER: root
+      - image: circleci/postgres:10-alpine-ram
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_DB: circle-test_test
+    parallelism: 1
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - pagedraw-yarn-{{ checksum "yarn.lock" }}
+      - run:
+          name: Installing npm dependencies
+          command: yarn install
+      - run:
+          name: Running devserver
+          command: yarn run devserver
+          background: true
+      - run: yarn js-tests
+      - run: yarn html-email-tests
+      - run: yarn layout-vs-preview-test
+      - run: yarn compile-vs-preview-test
+      - run: yarn compile-vs-preview-angular
+      - run: yarn docs-compile-test
+      - run: yarn sketch-test
+      - run: THROTTLE=1 yarn editor-loads-safely-test
+      - run: node react-scripts/build.js
+      - save_cache:
+          key: pagedraw-yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+
+
+workflows:
+  version: 2
+  run-tests:
+    jobs:
+      - test

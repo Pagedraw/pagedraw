@@ -1,0 +1,16 @@
+{
+  "name": "pagedraw-cli-webpack3",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack-dev-middleware": "^2.0.0",
+    "webpack-hot-middleware": "^2.22.3",
+    "wrapper-webpack-plugin": "^1.0.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "layout-vs-preview": {
+    "5267840498883705": {
+      "tolerance": 0.36,
+      "reason": "This case errors only on Circle."
+    }
+  },
+  "compile-vs-preview-emails": {
+    "11161659182695893": {
+      "tolerance": 0.14,
+      "reason": "This case errors only on Circle and HTML emails are feature-flagged."
+    }
+  }
+}

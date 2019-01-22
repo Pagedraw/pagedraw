@@ -1,0 +1,1348 @@
+* {
+    box-sizing: border-box;
+}
+
+.pd-onhover-parent >.pd-onhover {
+    display: none !important;
+}
+
+.pd-onhover-parent:hover > * {
+    display: none !important;
+}
+
+.pd-onhover-parent:hover > .pd-onhover {
+    display: flex !important;
+}
+
+.pd-onactive-parent > .pd-onactive {
+    display: none !important;
+}
+
+.pd-onactive-parent:active > * {
+    display: none !important;
+}
+
+.pd-onactive-parent:active > .pd-onactive {
+    display: flex !important;
+}
+
+.pd-onactive-parent.pd-onhover-parent:active > .pd-onhover {
+    display: none !important;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.no-focus-outline:focus {
+    outline: none;
+}
+
+.expand-children {
+    display: flex;
+    flex-direction: column;
+}
+
+.expand-children > * {
+    flex: 1;
+}
+
+a.nounderline:hover, a.nounderline:active {
+    text-decoration: none;
+}
+
+/* https://stackoverflow.com/a/4298216/257261 */
+.hide-number-spinner::-webkit-outer-spin-button, .hide-number-spinner::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+body {
+    margin: 0;
+}
+
+.code-sidebar input[type=text] {
+  font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace;
+  font-size: 13;
+  color: '#114473';
+}
+
+
+/* inspector */
+
+.sidebar {
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica', sans-serif;
+    background: #fff;
+
+    flex: 0 0 auto;
+    color: #222;
+
+    /* in case we want to show/hide sidebars, setting width=0 looks good */
+    transition: width 0.1s ease-out;
+}
+
+.sidebar .sidebar-default-content {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: #AAA;
+    font-family: helvetica, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.sidebar .ctrl-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 9px 0px;
+}
+
+h5.sidebar-ctrl-label {
+    cursor: default;
+    color: #292929;
+    margin-bottom: 2px;
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size: 11px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica', sans-serif;
+    display: inline-block;
+    min-width: 70px;
+    padding-right: 6px;
+    margin: 0;
+}
+
+.sidebar .ctrl-wrapper .ctrl {
+    flex: 1;
+    min-width: 80px;
+}
+
+.sidebar .ctrl-wrapper .ctrl > *, .sidebar .ctrl-wrapper .ctrl .dropdown-toggle {
+    width: 100%;
+}
+
+.sidebar .ctrl .btn-group {
+    display: flex;
+}
+
+.sidebar .ctrl .btn-group button {
+    flex: 1;
+}
+
+.sidebar hr {
+    border-color: #e4e4e4;
+    margin-bottom: 10px;
+    margin-top: 12px;
+    position: relative;
+    left: -2%;
+    width: 104%;
+}
+
+.sidebar button {
+    background: linear-gradient(to bottom, #fff, #ececec);
+    border-radius: 2px;
+    border: 1px solid #bfbfbf;
+    color: #3c3c3c;
+    padding: 0.3em;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+}
+
+.sidebar button:hover {
+    background: linear-gradient(to bottom, #f5f5f5, #eaeaea);
+}
+
+
+.sidebar button.btn-primary:hover {
+    /* pick up the bootstrap styles instead */
+    background: #337ab7;
+}
+
+.sidebar button:active {
+    background: linear-gradient(to bottom, #eaeaea, #f5f5f5);
+    outline: none;
+}
+
+.sidebar .sidebar-select-control button:focus {
+    outline: none;
+}
+
+.sidebar .pd-searchable-dropdown .dropdown-menu {
+    max-height: 12em;
+    overflow: auto;
+}
+
+/* FIXME: This is an attempt to unify the two PdDropdowns in editor/component-lib.cjsx
+ * I just copy pasted the styles from the semantic UI dropdown into here so we get dropdowns
+ * that are *a little bit* more consistent */
+.sidebar-select {
+    word-wrap: break-word;
+    line-height: 1em;
+    white-space: normal;
+    outline: 0;
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+    min-height: 2.71428571em;
+    background: #fff;
+    display: inline-block;
+    padding: .78571429em 2.1em .78571429em 1em;
+    color: rgba(0, 0, 0, 0.87);
+    box-shadow: none;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    border-radius: .28571429rem;
+    -webkit-transition: box-shadow 0.1s ease, width 0.1s ease;
+    transition: box-shadow 0.1s ease, width 0.1s ease;
+}
+
+
+/* get semantic-ui dropdown to play nice */
+.sidebar .pd-searchable-dropdown .menu {
+    min-width: calc(100% + 2px) !important;
+    width: calc(100% + 2px) !important;
+}
+
+.sidebar .pd-searchable-dropdown .menu .item, .sidebar .pd-searchable-dropdown {
+    font-size: 0.9em !important;
+}
+
+.scrollbar-show-on-hover {
+    overflow: hidden;
+}
+
+.scrollbar-show-on-hover:hover {
+    overflow: auto;
+}
+
+/* sidebar scrollbar */
+.editor-scrollbar::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+::-webkit-scrollbar-thumb {
+    height: 6px;
+    border: 3px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    -webkit-border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+.font-manager-infinite-scroll {
+    /*
+    React Infinite works by putting a scroll event on this guy, which mutates the DOM when fired.  It's cool;
+    it works by adding DOM nodes for the region that was scrolled to.  Regardless, it mutates the DOM on scroll.
+    Chrome's scroll anchoring intervention (see https://drafts.csswg.org/css-scroll-anchoring/) causes scrolling
+    when the DOM mutates.  You can guess what happens: scroll event causes dom mutation, dom mutation causes
+    scroll anchoring intervention, which causes a scroll, which causes a scroll event, which creates an infinite
+    event firing cycle.
+    Funny enough, this doesn't actually do anything visibly bad, because scroll events happen in some kind of
+    asynchronous, debounced way.  However, React Infinite does some mouse blocking for a little bit after scrolling.
+    Since it keeps getting scroll events, it keeps mouse blocking, and the infinite scroll guy seems to not be clickable,
+    sometimes, at random.  I think the mouse blocking is to prevent accidental clicks when scrolling on mobile.  It
+    hasn't on its own been a problem so far, so I think it's a nice touch.  However, when combined with the scroll
+    anchoring intervention described above, makes it so sometimes you can't click on the guys inside the infinite scroll.
+    This next line disables Chrome's scroll anchoring intervention for the font picker modal.
+    */
+    overflow-anchor: none;
+}
+
+/* dynamicable controls */
+
+.dynamicable-control {
+    position: relative;
+}
+
+.dynamicable-toggle-wrapper {
+    position: absolute;
+    left: -20px;
+    top: 0px;
+    width: 24px;
+    height: 24px;
+}
+
+.dynamicable-icon {
+    display: none;
+}
+
+.dynamicable-control:hover .dynamicable-icon {
+    display: inline;
+}
+
+.dynamicable-toggle-wrapper:hover .dynamicable-icon {
+    color: red;
+}
+
+/* end dynamicable controls */
+
+.open>.dropdown-menu {
+    /* for example: the font picker */
+    max-height: 20.5em;
+    overflow: auto;
+}
+
+
+.vdivider {
+    background-color: #CCC;
+    width: 1px;
+}
+
+.underlined-number-input {
+    width: 50px; text-align: right;
+    border: none; background: none; border-radius: 0;
+    margin: 0; padding: 0px;
+    border-bottom: 1px solid #bdbdbd
+}
+
+/* layout editor */
+
+.layout-view {
+    /* for blocks to position themselves */
+    position: relative;
+
+    /*
+     * So a really really long time ago, we had this weird CSS-ish bug in Firefox,
+     * and the following line fixed it, or compensated for a side effect of the fix,
+     * or something.  The bug hasn't been relevant in years, and I'm pretty sure this
+     * isn't doing anything, but we never really understood it so I'm just going to
+     * leave this here.
+     */
+    font-size: 14px;
+}
+
+.layout-view-block {
+    /* so we can give a position in (top, left) */
+    position: absolute;
+}
+
+
+/* block overlay and conditional classes */
+
+.mouse-full-block-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.block-selected,
+.block-selected.overlapping-block, /* take priority over overlapping red dots */
+.unlocked-block.highlight-because-hover-in-layer-list,
+.highlight-blocks-on-hover .unlocked-block:hover
+{
+    /* honestly it's a little weird we don't have a different color for hovered vs selected */
+    border: 1px solid #1798D6;
+}
+
+.overlapping-block {
+    border: 1px dashed #A72826;
+}
+
+.empty-dynamics {
+    background: rgba(255, 0, 0, 0.2);
+}
+
+.filled-dynamics {
+    background: rgba(64, 224, 60, 0.2);
+}
+
+.custom-code {
+    background: rgba(224, 0, 224, 0.2);
+}
+
+.proto-linking {
+    background-color: rgba(250, 165, 0, 0.7);
+}
+
+.border-on-measure {
+    border: 1px solid rgba(255, 50, 50, 0.8);
+}
+
+/* Material UI like spinner taken from https://codepen.io/mrrocks/pen/EiplA */
+.spinner {
+  animation: rotator 1.4s linear infinite;
+}
+
+@keyframes rotator {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(270deg); }
+}
+
+.spinner-path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation:
+    dash 1.4s ease-in-out infinite,
+    colors 5.6s ease-in-out infinite;
+}
+
+@keyframes colors {
+	0% { stroke: #4285F4; }
+	25% { stroke: #DE3E35; }
+	50% { stroke: #F7C223; }
+	75% { stroke: #1B9A59; }
+  100% { stroke: #4285F4; }
+}
+
+@keyframes dash {
+ 0% { stroke-dashoffset: 187; }
+ 50% {
+   stroke-dashoffset: 47;
+   transform:rotate(135deg);
+ }
+ 100% {
+   stroke-dashoffset: 187;
+   transform:rotate(450deg);
+ }
+}
+
+/* stress tester */
+
+.stress-tester {
+    outline: none;
+    position: relative;
+    cursor: default !important;
+}
+
+.stress-tester-selected-block, .stress-tester-block:hover {
+    outline: 1px solid #1798D6;
+}
+
+/* resizing grip controls */
+
+.ios-style-resizing-grip--old-and-deprecated {
+    /* size = 15 */;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: -5px; /* -size/2 */
+    left: -5px;
+    border-radius: 5px;
+
+    border: 1px solid white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+10,1e5799+95 */
+    background: #7db9e8; /* Old browsers */
+    background: -moz-linear-gradient(top,  #7db9e8 10%, #1e5799 95%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #7db9e8 10%,#1e5799 95%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #7db9e8 10%,#1e5799 95%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
+}
+
+.resizing-frame {
+    pointer-events: none;
+}
+
+.gabe-grip {
+    pointer-events: all;
+
+    /* size = 15 */;
+    width: 8px;
+    height: 8px;
+    position: relative;
+    top: -4px; /* -size/2 */
+    left: -4px;
+
+    border: 1px solid #bbb;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.8);
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+10,1e5799+95 */
+    background: #fff; /* Old browsers */
+}
+
+
+/* text block */
+.quill-editor {
+    padding: 0px;
+    font-family: inherit;
+    line-height: inherit;
+
+    /* quill unstyling */
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    overflow: inherit;
+}
+
+.ql-editor {
+    white-space: normal !important;
+
+}
+
+/* Tweaks to bootstrap related stuff.
+ * Fixme: Maybe this shouldn't be here? */
+
+/* Clearfix hack: http://stackoverflow.com/questions/218760/how-do-you-keep-parents-of-floated-elements-from-collapsing */
+.bootstrap .nav-tabs:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-14 { font-size: 14px; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+
+/* layer list */
+
+.layer-list {
+    flex: 1;
+
+    background: #f1f1f1;
+    width: 210px;
+    padding: 0;
+
+    font-family: Roboto;
+    color: #222;
+    font-size: 12px;
+    font-weight: 400;
+
+    /* in case we want to show/hide sidebars, setting width=0 looks good */
+    transition: width 0.1s ease-out;
+}
+
+.layer-list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    /* padding left is computed in JS based on depth */
+    padding: 15px;
+
+    margin: 0;
+    height: 27px;
+
+    cursor: pointer;
+}
+
+.layer-list-item:nth-child(even) {
+    background: #f5f5f5;
+}
+
+.layer-list-item.top-level {
+    color: black;
+    background-color: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-left: 0;
+    border-right: 0;
+    font-weight: 400;
+}
+
+.layer-list-item.top-level + .layer-list-item.top-level, .layer-list-item.top-level:first-child {
+    border-top: 0;
+}
+
+.layer-list-item.selected {
+    pointer: text;
+    color: white;
+    background-color: #3fa6ff;
+}
+
+.layer-list-item .locker { display: none }
+.layer-list-item:hover .locker, .layer-list-item .locked .locker { display: block; }
+.layer-list-item .locker:hover { background-color: #bfbfbf; border-radius: 100%; cursor:pointer; }
+
+.layer-list-item-line {
+    /* one line; crop overflowing text with "..." */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.layer-list-collapser {
+    cursor: pointer;
+    padding: 6px 5px;
+
+    /* triangle width: 5.5px; total width = 5px * 2 (padding) + 5.5px (width) */
+    margin-left: -15.5px;
+}
+
+.layer-list-collapser-triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3.5px 0 3.5px 5.5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* end of layer list */
+
+/* alignment buttons */
+
+.btn-alignment:hover {
+    background: #ebe8eb;
+}
+
+.btn-alignment:disabled.btn-alignment:hover {
+    background: transparent !important;
+}
+
+.btn-alignment:disabled {
+    margin: 0 !important;
+}
+
+/* Facebook like content loading style. Per http://cloudcannon.com/deconstructions/2014/11/15/facebook-content-placeholder-deconstruction.html */
+.background-masker {
+    background: #fff;
+    position: absolute;
+}
+
+/* Every thing below this is just positioning */
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+.animated-background {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    position: relative;
+}
+
+.click-disabled {
+    cursor: not-allowed;
+}
+
+.code-file-paths-modal {
+    width: unset !important;
+    margin: 50px 100px !important;
+}
+
+.react-live .token.comment {
+    color: aquamarine;
+}
+
+.react-live .token.keyword {
+    color: #f92672;
+}
+
+.react-live .token.string {
+    color: #e6db74;
+}
+
+.react-live .token.tag {
+    color: #e6db74;
+}
+
+.react-live .token.script {
+    color: #f8f8f2;
+}
+
+.react-live .token.attr-name {
+    color: #f8f8f2;
+}
+
+.react-live .prism-code {
+    color: #f8f8f2;
+    background-color: #23241f;
+}
+
+.pd-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.pd-tooltip .pd-tooltiptext {
+    opacity: 0;
+    transition: opacity 1s;
+
+    display: inline-block;
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+
+}
+
+
+.pd-tooltip:hover .pd-tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+.pd-tooltip .pd-tooltiptext::after {
+    content: " ";
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+}
+
+/* This is not generic right now but f*ck CSS */
+.pd-tooltiptext.tooltip-top {
+    width: 120px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.pd-tooltiptext.tooltip-top::after {
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-color: black transparent transparent transparent;
+}
+
+.pd-tooltiptext.tooltip-right {
+    width: 120px;
+    top: -5px;
+    left: 135%;
+}
+
+.pd-tooltiptext.tooltip-right::after {
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-color: transparent black transparent transparent;
+}
+
+/* react-split-pane styles (used in Stackblitz) */
+.Resizer {
+    background: #000;
+    opacity: .2;
+    z-index: 100;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+}
+
+    .Resizer:hover {
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+}
+
+    .Resizer.horizontal {
+    height: 11px;
+    margin: -5px 0;
+    border-top: 5px solid rgba(255, 255, 255, 0);
+    border-bottom: 5px solid rgba(255, 255, 255, 0);
+    cursor: row-resize;
+    width: 100%;
+}
+
+.Resizer.horizontal:hover {
+    border-top: 5px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+}
+
+.Resizer.vertical {
+    width: 11px;
+    margin: 0 -5px;
+    border-left: 5px solid rgba(255, 255, 255, 0);
+    border-right: 5px solid rgba(255, 255, 255, 0);
+    cursor: col-resize;
+}
+
+.Resizer.vertical:hover {
+    border-left: 5px solid rgba(0, 0, 0, 0.5);
+    border-right: 5px solid rgba(0, 0, 0, 0.5);
+}
+.Resizer.disabled {
+    cursor: not-allowed;
+}
+.Resizer.disabled:hover {
+    border-color: transparent;
+}
+
+.mouse-full-overlay
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+/* FIXME: The right thing to do is to ask Stackblitz to give us a ref to the iframe from their API*/
+.blitz-sb-mount-parent iframe {
+    border: 0px;
+}
+
+/* fiddle and tutorial left hand sidebar for README.md */
+.fiddle-readme-bar {
+    font-family: Lato, sans-serif;
+    color: #444;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.fiddle-readme-bar header {
+    display: flex;
+    align-items: center;
+    background: rgb(42, 42, 89);
+    padding: 25px;
+    padding-top: 40px;
+    padding-left: 30px;
+
+    font-size: 30px;
+    line-height: 1;
+}
+
+.fiddle-readme-bar header .pagedog-logo {
+    width: 70px;
+    margin-right: 20px;
+}
+
+.fiddle-readme-bar header .logotype {
+    color: #FFF;
+}
+
+.fiddle-readme-bar header .productname {
+    color: #DDD;
+    font-weight: 100;
+}
+
+.fiddle-readme-bar .scroll-pane {
+    flex: 1;
+
+    padding: 25px;
+    padding-top: 0px;
+    padding-left: 30px;
+
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.fiddle-readme-bar .content {
+    flex: 1;
+    counter-reset: readmemd-step;
+}
+
+.fiddle-readme-bar .content h3 {
+    display: flex;
+    align-items: center;
+
+    font-weight: normal;
+    font-size: large;
+
+    margin-top: 2.5em;
+}
+
+.fiddle-readme-bar .content h3::before {
+    counter-increment: readmemd-step;
+    content: counter(readmemd-step);
+    font-size: 0.8em;
+
+    border: 2px solid;
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    margin-right: 1em;
+    width: 30px;
+    height: 30px;
+}
+
+.fiddle-readme-bar .content img {
+    width: 100%;
+    max-width: 400px;
+
+    display: block;
+    margin: auto;
+}
+
+.fiddle-readme-bar .content a {
+    color: #6868c4;
+    text-decoration: underline;
+}
+.fiddle-readme-bar .content a:hover  { color: #5151b9; }
+.fiddle-readme-bar .content a:active { color: #21216e; }
+
+
+/* code highlighting in the fiddle-readme-bar.  UUUUUUGH.  */
+
+.fiddle-readme-bar .content .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: #272822;
+    color: #ddd;
+
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    font-size: 12px;
+
+    padding: 16px 16px;
+    margin: -10px -16px;
+    border-radius: 5px;
+}
+
+.fiddle-readme-bar .content .hljs-tag,
+.fiddle-readme-bar .content .hljs-keyword,
+.fiddle-readme-bar .content .hljs-selector-tag,
+.fiddle-readme-bar .content .hljs-literal,
+.fiddle-readme-bar .content .hljs-strong
+{
+    color: #f92672;
+}
+
+.fiddle-readme-bar .content .hljs-code
+{
+    color: #66d9ef;
+}
+
+.fiddle-readme-bar .content .hljs-class .hljs-title
+{
+    color: white;
+}
+
+.fiddle-readme-bar .content .hljs-attribute,
+.fiddle-readme-bar .content .hljs-symbol,
+.fiddle-readme-bar .content .hljs-regexp,
+.fiddle-readme-bar .content .hljs-link
+{
+    color: #bf79db;
+}
+
+.fiddle-readme-bar .content .hljs-string,
+.fiddle-readme-bar .content .hljs-bullet,
+.fiddle-readme-bar .content .hljs-subst,
+.fiddle-readme-bar .content .hljs-title,
+.fiddle-readme-bar .content .hljs-section,
+.fiddle-readme-bar .content .hljs-emphasis,
+.fiddle-readme-bar .content .hljs-type,
+.fiddle-readme-bar .content .hljs-built_in,
+.fiddle-readme-bar .content .hljs-builtin-name,
+.fiddle-readme-bar .content .hljs-selector-attr,
+.fiddle-readme-bar .content .hljs-selector-pseudo,
+.fiddle-readme-bar .content .hljs-addition,
+.fiddle-readme-bar .content .hljs-variable,
+.fiddle-readme-bar .content .hljs-template-tag,
+.fiddle-readme-bar .content .hljs-template-variable
+{
+    color: #ce9178;
+}
+
+.fiddle-readme-bar .content .hljs-comment,
+.fiddle-readme-bar .content .hljs-quote,
+.fiddle-readme-bar .content .hljs-deletion,
+.fiddle-readme-bar .content .hljs-meta
+{
+    color: #75715e;
+}
+
+.fiddle-readme-bar .content .hljs-selector-tag,
+.fiddle-readme-bar .content .hljs-literal,
+.fiddle-readme-bar .content .hljs-doctag,
+.fiddle-readme-bar .content .hljs-section,
+.fiddle-readme-bar .content .hljs-type,
+.fiddle-readme-bar .content .hljs-selector-id
+{
+    font-weight: bold;
+}
+
+.fiddle-readme-bar .content .hljs-name,
+.fiddle-readme-bar .content .hljs-title
+{
+    color: #3dc1a0;
+}
+
+.fiddle-readme-bar .content .hljs-keyword
+{
+    color: #b86cb4;
+}
+
+/** Here starts Blueprint JS CSS. I copy pasted this in here to use the @blueprintjs/menu in the editor (Gabe 05/13/18).
+ * Global styles of Blueprint are not included so do not use Blueprint unless you know what you're doing.
+ **/
+/* Blueprint JS Icons */
+
+@font-face{
+  font-family:"Icons16";
+  font-weight:normal;
+  font-style:normal;
+  src:url("../../resources/icons/icons-16.eot?#iefix") format("embedded-opentype"), url("../../resources/icons/icons-16.woff") format("woff"), url("../../resources/icons/icons-16.ttf") format("truetype"); }
+
+@font-face{
+  font-family:"Icons20";
+  font-weight:normal;
+  font-style:normal;
+  src:url("../../resources/icons/icons-20.eot?#iefix") format("embedded-opentype"), url("../../resources/icons/icons-20.woff") format("woff"), url("../../resources/icons/icons-20.ttf") format("truetype"); }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9ibHVlcHJpbnQtaWNvbnMuc2NzcyIsIi4uLy4uL3NyYy9fZm9udC1mYWNlLnNjc3MiLCIuLi8uLi9zcmMvX2ZvbnQtaW1wb3J0cy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7OztFQUtFO0FDNkJBO0VBQ0Usc0JDM0J3QjtFRDRCeEIsbUJBTGtCO0VBTWxCLGtCQUxpQjtFQU9qQiwwTUFpQjZDLEVBQUE7O0FBdEIvQztFQUNFLHNCQzFCd0I7RUQyQnhCLG1CQUxrQjtFQU1sQixrQkFMaUI7RUFPakIsME1BaUI2QyxFQUFBIiwiZmlsZSI6ImJsdWVwcmludC1pY29ucy5jc3MifQ== */
+
+
+/* BlueprintJS CSS */
+
+.pt-menu{
+  margin:0;
+  border-radius:3px;
+  background:#ffffff;
+  min-width:180px;
+  padding:5px;
+  list-style:none;
+  text-align:left;
+  line-height:1.28581;
+  letter-spacing:0;
+  font-family:-apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", "Icons16", sans-serif;
+  font-size:14px;
+  font-weight:400;
+  color:#182026; }
+
+.pt-menu-divider{
+  display:block;
+  margin:5px;
+  border-top:1px solid rgba(16, 22, 26, 0.15); }
+  .pt-dark .pt-menu-divider{
+    border-top-color:rgba(255, 255, 255, 0.15); }
+
+.pt-menu-item{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:horizontal;
+  -webkit-box-direction:normal;
+      -ms-flex-direction:row;
+          flex-direction:row;
+  -webkit-box-align:start;
+      -ms-flex-align:start;
+          align-items:flex-start;
+  border-radius:2px;
+  padding:5px 7px;
+  text-decoration:none;
+  line-height:20px;
+  color:inherit;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none; }
+  .pt-menu-item > *{
+    -webkit-box-flex:0;
+        -ms-flex-positive:0;
+            flex-grow:0;
+    -ms-flex-negative:0;
+        flex-shrink:0; }
+  .pt-menu-item > .pt-fill{
+    -webkit-box-flex:1;
+        -ms-flex-positive:1;
+            flex-grow:1;
+    -ms-flex-negative:1;
+        flex-shrink:1; }
+  .pt-menu-item::before,
+  .pt-menu-item > *{
+    margin-right:7px; }
+  .pt-menu-item:empty::before,
+  .pt-menu-item > :last-child{
+    margin-right:0; }
+  .pt-menu-item > .pt-fill{
+    word-break:break-word; }
+  .pt-menu-item:hover, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-menu-item{
+    background-color:rgba(167, 182, 194, 0.3);
+    cursor:pointer;
+    text-decoration:none; }
+  .pt-menu-item.pt-disabled{
+    background-color:inherit;
+    cursor:not-allowed;
+    color:rgba(92, 112, 128, 0.5); }
+  .pt-dark .pt-menu-item{
+    color:inherit; }
+    .pt-dark .pt-menu-item:hover, .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-menu-item{
+      background-color:rgba(138, 155, 168, 0.15);
+      color:inherit; }
+    .pt-dark .pt-menu-item.pt-disabled{
+      background-color:inherit;
+      color:rgba(191, 204, 214, 0.5); }
+  .pt-menu-item.pt-intent-primary{
+    color:#106ba3; }
+    .pt-menu-item.pt-intent-primary .pt-icon{
+      color:inherit; }
+    .pt-menu-item.pt-intent-primary::before, .pt-menu-item.pt-intent-primary::after,
+    .pt-menu-item.pt-intent-primary .pt-menu-item-label{
+      color:#106ba3; }
+    .pt-menu-item.pt-intent-primary:hover, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-primary.pt-menu-item, .pt-menu-item.pt-intent-primary.pt-active{
+      background-color:#137cbd; }
+    .pt-menu-item.pt-intent-primary:active{
+      background-color:#106ba3; }
+    .pt-menu-item.pt-intent-primary:hover, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-primary.pt-menu-item, .pt-menu-item.pt-intent-primary:hover::before, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-primary.pt-menu-item::before, .pt-menu-item.pt-intent-primary:hover::after, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-primary.pt-menu-item::after,
+    .pt-menu-item.pt-intent-primary:hover .pt-menu-item-label, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-primary.pt-menu-item .pt-menu-item-label, .pt-menu-item.pt-intent-primary:active, .pt-menu-item.pt-intent-primary:active::before, .pt-menu-item.pt-intent-primary:active::after,
+    .pt-menu-item.pt-intent-primary:active .pt-menu-item-label, .pt-menu-item.pt-intent-primary.pt-active, .pt-menu-item.pt-intent-primary.pt-active::before, .pt-menu-item.pt-intent-primary.pt-active::after,
+    .pt-menu-item.pt-intent-primary.pt-active .pt-menu-item-label{
+      color:#ffffff; }
+  .pt-menu-item.pt-intent-success{
+    color:#0d8050; }
+    .pt-menu-item.pt-intent-success .pt-icon{
+      color:inherit; }
+    .pt-menu-item.pt-intent-success::before, .pt-menu-item.pt-intent-success::after,
+    .pt-menu-item.pt-intent-success .pt-menu-item-label{
+      color:#0d8050; }
+    .pt-menu-item.pt-intent-success:hover, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-success.pt-menu-item, .pt-menu-item.pt-intent-success.pt-active{
+      background-color:#0f9960; }
+    .pt-menu-item.pt-intent-success:active{
+      background-color:#0d8050; }
+    .pt-menu-item.pt-intent-success:hover, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-success.pt-menu-item, .pt-menu-item.pt-intent-success:hover::before, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-success.pt-menu-item::before, .pt-menu-item.pt-intent-success:hover::after, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-success.pt-menu-item::after,
+    .pt-menu-item.pt-intent-success:hover .pt-menu-item-label, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-success.pt-menu-item .pt-menu-item-label, .pt-menu-item.pt-intent-success:active, .pt-menu-item.pt-intent-success:active::before, .pt-menu-item.pt-intent-success:active::after,
+    .pt-menu-item.pt-intent-success:active .pt-menu-item-label, .pt-menu-item.pt-intent-success.pt-active, .pt-menu-item.pt-intent-success.pt-active::before, .pt-menu-item.pt-intent-success.pt-active::after,
+    .pt-menu-item.pt-intent-success.pt-active .pt-menu-item-label{
+      color:#ffffff; }
+  .pt-menu-item.pt-intent-warning{
+    color:#bf7326; }
+    .pt-menu-item.pt-intent-warning .pt-icon{
+      color:inherit; }
+    .pt-menu-item.pt-intent-warning::before, .pt-menu-item.pt-intent-warning::after,
+    .pt-menu-item.pt-intent-warning .pt-menu-item-label{
+      color:#bf7326; }
+    .pt-menu-item.pt-intent-warning:hover, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-warning.pt-menu-item, .pt-menu-item.pt-intent-warning.pt-active{
+      background-color:#d9822b; }
+    .pt-menu-item.pt-intent-warning:active{
+      background-color:#bf7326; }
+    .pt-menu-item.pt-intent-warning:hover, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-warning.pt-menu-item, .pt-menu-item.pt-intent-warning:hover::before, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-warning.pt-menu-item::before, .pt-menu-item.pt-intent-warning:hover::after, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-warning.pt-menu-item::after,
+    .pt-menu-item.pt-intent-warning:hover .pt-menu-item-label, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-warning.pt-menu-item .pt-menu-item-label, .pt-menu-item.pt-intent-warning:active, .pt-menu-item.pt-intent-warning:active::before, .pt-menu-item.pt-intent-warning:active::after,
+    .pt-menu-item.pt-intent-warning:active .pt-menu-item-label, .pt-menu-item.pt-intent-warning.pt-active, .pt-menu-item.pt-intent-warning.pt-active::before, .pt-menu-item.pt-intent-warning.pt-active::after,
+    .pt-menu-item.pt-intent-warning.pt-active .pt-menu-item-label{
+      color:#ffffff; }
+  .pt-menu-item.pt-intent-danger{
+    color:#c23030; }
+    .pt-menu-item.pt-intent-danger .pt-icon{
+      color:inherit; }
+    .pt-menu-item.pt-intent-danger::before, .pt-menu-item.pt-intent-danger::after,
+    .pt-menu-item.pt-intent-danger .pt-menu-item-label{
+      color:#c23030; }
+    .pt-menu-item.pt-intent-danger:hover, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-danger.pt-menu-item, .pt-menu-item.pt-intent-danger.pt-active{
+      background-color:#db3737; }
+    .pt-menu-item.pt-intent-danger:active{
+      background-color:#c23030; }
+    .pt-menu-item.pt-intent-danger:hover, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-danger.pt-menu-item, .pt-menu-item.pt-intent-danger:hover::before, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-danger.pt-menu-item::before, .pt-menu-item.pt-intent-danger:hover::after, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-danger.pt-menu-item::after,
+    .pt-menu-item.pt-intent-danger:hover .pt-menu-item-label, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-danger.pt-menu-item .pt-menu-item-label, .pt-menu-item.pt-intent-danger:active, .pt-menu-item.pt-intent-danger:active::before, .pt-menu-item.pt-intent-danger:active::after,
+    .pt-menu-item.pt-intent-danger:active .pt-menu-item-label, .pt-menu-item.pt-intent-danger.pt-active, .pt-menu-item.pt-intent-danger.pt-active::before, .pt-menu-item.pt-intent-danger.pt-active::after,
+    .pt-menu-item.pt-intent-danger.pt-active .pt-menu-item-label{
+      color:#ffffff; }
+  .pt-menu-item::before{
+    line-height:1;
+    font-family:"Icons16", sans-serif;
+    font-size:16px;
+    font-weight:400;
+    font-style:normal;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    margin-right:7px; }
+  .pt-menu-item::before,
+  .pt-menu-item .pt-icon{
+    margin-top:2px;
+    color:#5c7080; }
+  .pt-menu-item .pt-menu-item-label{
+    color:#5c7080; }
+  .pt-menu-item:hover, .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-menu-item{
+    color:inherit; }
+  .pt-menu-item.pt-active, .pt-menu-item:active{
+    background-color:rgba(115, 134, 148, 0.3); }
+  .pt-menu-item.pt-disabled{
+    outline:none !important;
+    background-color:inherit !important;
+    cursor:not-allowed !important;
+    color:rgba(92, 112, 128, 0.5) !important; }
+    .pt-menu-item.pt-disabled::before,
+    .pt-menu-item.pt-disabled .pt-icon,
+    .pt-menu-item.pt-disabled .pt-menu-item-label{
+      color:rgba(92, 112, 128, 0.5) !important; }
+  .pt-large .pt-menu-item{
+    padding:9px 7px;
+    line-height:22px;
+    font-size:16px; }
+    .pt-large .pt-menu-item .pt-icon{
+      margin-top:3px; }
+    .pt-large .pt-menu-item::before{
+      line-height:1;
+      font-family:"Icons20", sans-serif;
+      font-size:20px;
+      font-weight:400;
+      font-style:normal;
+      -moz-osx-font-smoothing:grayscale;
+      -webkit-font-smoothing:antialiased;
+      margin-top:1px;
+      margin-right:10px; }
+
+button.pt-menu-item{
+  border:none;
+  background:none;
+  width:100%;
+  text-align:left; }
+.pt-menu-header{
+  display:block;
+  margin:5px;
+  border-top:1px solid rgba(16, 22, 26, 0.15);
+  cursor:default;
+  padding-left:2px; }
+  .pt-dark .pt-menu-header{
+    border-top-color:rgba(255, 255, 255, 0.15); }
+  .pt-menu-header:first-of-type{
+    border-top:none; }
+  .pt-menu-header > h6{
+    color:#182026;
+    font-weight:600;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-wrap:normal;
+    margin:0;
+    padding:10px 7px 0 1px;
+    line-height:17px; }
+  .pt-menu-header:first-of-type > h6{
+    padding-top:0; }
+  .pt-large .pt-menu-header > h6{
+    padding-top:15px;
+    padding-bottom:5px;
+    font-size:18px; }
+  .pt-large .pt-menu-header:first-of-type > h6{
+    padding-top:0; }
+
+.pt-dark .pt-menu{
+  background:#30404d;
+  color:#f5f8fa; }
+
+.pt-dark .pt-menu-item.pt-intent-primary{
+  color:#48aff0; }
+  .pt-dark .pt-menu-item.pt-intent-primary .pt-icon{
+    color:inherit; }
+  .pt-dark .pt-menu-item.pt-intent-primary::before, .pt-dark .pt-menu-item.pt-intent-primary::after,
+  .pt-dark .pt-menu-item.pt-intent-primary .pt-menu-item-label{
+    color:#48aff0; }
+  .pt-dark .pt-menu-item.pt-intent-primary:hover, .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-primary.pt-menu-item, .pt-dark .pt-menu-item.pt-intent-primary.pt-active{
+    background-color:#137cbd; }
+  .pt-dark .pt-menu-item.pt-intent-primary:active{
+    background-color:#106ba3; }
+  .pt-dark .pt-menu-item.pt-intent-primary:hover, .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-primary.pt-menu-item, .pt-dark .pt-menu-item.pt-intent-primary:hover::before, .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-primary.pt-menu-item::before, .pt-dark .pt-menu-item.pt-intent-primary:hover::after, .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-primary.pt-menu-item::after,
+  .pt-dark .pt-menu-item.pt-intent-primary:hover .pt-menu-item-label,
+  .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-primary.pt-menu-item .pt-menu-item-label, .pt-dark .pt-menu-item.pt-intent-primary:active, .pt-dark .pt-menu-item.pt-intent-primary:active::before, .pt-dark .pt-menu-item.pt-intent-primary:active::after,
+  .pt-dark .pt-menu-item.pt-intent-primary:active .pt-menu-item-label, .pt-dark .pt-menu-item.pt-intent-primary.pt-active, .pt-dark .pt-menu-item.pt-intent-primary.pt-active::before, .pt-dark .pt-menu-item.pt-intent-primary.pt-active::after,
+  .pt-dark .pt-menu-item.pt-intent-primary.pt-active .pt-menu-item-label{
+    color:#ffffff; }
+
+.pt-dark .pt-menu-item.pt-intent-success{
+  color:#3dcc91; }
+  .pt-dark .pt-menu-item.pt-intent-success .pt-icon{
+    color:inherit; }
+  .pt-dark .pt-menu-item.pt-intent-success::before, .pt-dark .pt-menu-item.pt-intent-success::after,
+  .pt-dark .pt-menu-item.pt-intent-success .pt-menu-item-label{
+    color:#3dcc91; }
+  .pt-dark .pt-menu-item.pt-intent-success:hover, .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-success.pt-menu-item, .pt-dark .pt-menu-item.pt-intent-success.pt-active{
+    background-color:#0f9960; }
+  .pt-dark .pt-menu-item.pt-intent-success:active{
+    background-color:#0d8050; }
+  .pt-dark .pt-menu-item.pt-intent-success:hover, .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-success.pt-menu-item, .pt-dark .pt-menu-item.pt-intent-success:hover::before, .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-success.pt-menu-item::before, .pt-dark .pt-menu-item.pt-intent-success:hover::after, .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-success.pt-menu-item::after,
+  .pt-dark .pt-menu-item.pt-intent-success:hover .pt-menu-item-label,
+  .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-success.pt-menu-item .pt-menu-item-label, .pt-dark .pt-menu-item.pt-intent-success:active, .pt-dark .pt-menu-item.pt-intent-success:active::before, .pt-dark .pt-menu-item.pt-intent-success:active::after,
+  .pt-dark .pt-menu-item.pt-intent-success:active .pt-menu-item-label, .pt-dark .pt-menu-item.pt-intent-success.pt-active, .pt-dark .pt-menu-item.pt-intent-success.pt-active::before, .pt-dark .pt-menu-item.pt-intent-success.pt-active::after,
+  .pt-dark .pt-menu-item.pt-intent-success.pt-active .pt-menu-item-label{
+    color:#ffffff; }
+
+.pt-dark .pt-menu-item.pt-intent-warning{
+  color:#ffb366; }
+  .pt-dark .pt-menu-item.pt-intent-warning .pt-icon{
+    color:inherit; }
+  .pt-dark .pt-menu-item.pt-intent-warning::before, .pt-dark .pt-menu-item.pt-intent-warning::after,
+  .pt-dark .pt-menu-item.pt-intent-warning .pt-menu-item-label{
+    color:#ffb366; }
+  .pt-dark .pt-menu-item.pt-intent-warning:hover, .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-warning.pt-menu-item, .pt-dark .pt-menu-item.pt-intent-warning.pt-active{
+    background-color:#d9822b; }
+  .pt-dark .pt-menu-item.pt-intent-warning:active{
+    background-color:#bf7326; }
+  .pt-dark .pt-menu-item.pt-intent-warning:hover, .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-warning.pt-menu-item, .pt-dark .pt-menu-item.pt-intent-warning:hover::before, .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-warning.pt-menu-item::before, .pt-dark .pt-menu-item.pt-intent-warning:hover::after, .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-warning.pt-menu-item::after,
+  .pt-dark .pt-menu-item.pt-intent-warning:hover .pt-menu-item-label,
+  .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-warning.pt-menu-item .pt-menu-item-label, .pt-dark .pt-menu-item.pt-intent-warning:active, .pt-dark .pt-menu-item.pt-intent-warning:active::before, .pt-dark .pt-menu-item.pt-intent-warning:active::after,
+  .pt-dark .pt-menu-item.pt-intent-warning:active .pt-menu-item-label, .pt-dark .pt-menu-item.pt-intent-warning.pt-active, .pt-dark .pt-menu-item.pt-intent-warning.pt-active::before, .pt-dark .pt-menu-item.pt-intent-warning.pt-active::after,
+  .pt-dark .pt-menu-item.pt-intent-warning.pt-active .pt-menu-item-label{
+    color:#ffffff; }
+
+.pt-dark .pt-menu-item.pt-intent-danger{
+  color:#ff7373; }
+  .pt-dark .pt-menu-item.pt-intent-danger .pt-icon{
+    color:inherit; }
+  .pt-dark .pt-menu-item.pt-intent-danger::before, .pt-dark .pt-menu-item.pt-intent-danger::after,
+  .pt-dark .pt-menu-item.pt-intent-danger .pt-menu-item-label{
+    color:#ff7373; }
+  .pt-dark .pt-menu-item.pt-intent-danger:hover, .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-danger.pt-menu-item, .pt-dark .pt-menu-item.pt-intent-danger.pt-active{
+    background-color:#db3737; }
+  .pt-dark .pt-menu-item.pt-intent-danger:active{
+    background-color:#c23030; }
+  .pt-dark .pt-menu-item.pt-intent-danger:hover, .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-danger.pt-menu-item, .pt-dark .pt-menu-item.pt-intent-danger:hover::before, .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-danger.pt-menu-item::before, .pt-dark .pt-menu-item.pt-intent-danger:hover::after, .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-danger.pt-menu-item::after,
+  .pt-dark .pt-menu-item.pt-intent-danger:hover .pt-menu-item-label,
+  .pt-dark .pt-submenu > .pt-popover-wrapper > .pt-popover-open > .pt-intent-danger.pt-menu-item .pt-menu-item-label, .pt-dark .pt-menu-item.pt-intent-danger:active, .pt-dark .pt-menu-item.pt-intent-danger:active::before, .pt-dark .pt-menu-item.pt-intent-danger:active::after,
+  .pt-dark .pt-menu-item.pt-intent-danger:active .pt-menu-item-label, .pt-dark .pt-menu-item.pt-intent-danger.pt-active, .pt-dark .pt-menu-item.pt-intent-danger.pt-active::before, .pt-dark .pt-menu-item.pt-intent-danger.pt-active::after,
+  .pt-dark .pt-menu-item.pt-intent-danger.pt-active .pt-menu-item-label{
+    color:#ffffff; }
+
+.pt-dark .pt-menu-item::before,
+.pt-dark .pt-menu-item .pt-icon{
+  color:#bfccd6; }
+
+.pt-dark .pt-menu-item .pt-menu-item-label{
+  color:#bfccd6; }
+
+.pt-dark .pt-menu-item.pt-active, .pt-dark .pt-menu-item:active{
+  background-color:rgba(138, 155, 168, 0.3); }
+
+.pt-dark .pt-menu-item.pt-disabled{
+  color:rgba(191, 204, 214, 0.5) !important; }
+  .pt-dark .pt-menu-item.pt-disabled::before,
+  .pt-dark .pt-menu-item.pt-disabled .pt-icon,
+  .pt-dark .pt-menu-item.pt-disabled .pt-menu-item-label{
+    color:rgba(191, 204, 214, 0.5) !important; }
+
+.pt-dark .pt-menu-divider,
+.pt-dark .pt-menu-header{
+  border-color:rgba(255, 255, 255, 0.15); }
+
+.pt-dark .pt-menu-header > h6{
+  color:#f5f8fa; }
+
+.pt-label .pt-menu{
+  margin-top:5px; }
+
+/** End of BlueprintJS CSS */
+
+/* Diff View Mode */
+.faded-out {
+    background-color: rgb(51, 51, 51, .9);
+}

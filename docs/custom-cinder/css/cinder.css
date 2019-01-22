@@ -1,0 +1,300 @@
+/*
+  Cinder Theme for MkDocs | Copyright 2015 Christopher Simpkins | MIT License
+*/
+
+body {
+    font-size: 16px;
+    line-height: 1.7;
+    background-color: #FFF;
+    color: #343838;
+    font-weight: normal;
+
+    font-family: 'Lato', sans-serif;
+}
+
+p img {
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1em;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    color: #222;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
+    color: #B1B7B9;
+}
+h1 {
+    margin: 1em 0;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #DDD;
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-top: 1.2em;
+    margin-bottom: 0.7em;
+    color: #444;
+}
+
+h3 {
+    font-size: 17px;
+    font-weight: 700;
+
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+h4 {
+    font-style: italic;
+}
+h5 {
+    font-variant: small-caps;
+}
+
+pre {
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    /* we don't want the code inside the padding to have any padding around it */
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+pre code.hljs {
+    font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace;
+    font-size: 13px;
+
+    padding: 16px 16px;
+    margin: -10px -16px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.gist .table > tbody > tr > td {
+    border-top: 0;
+}
+
+.lead {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 0.45em;
+    font-weight: 200;
+    line-height: 1.4;
+    letter-spacing: 0.0312em;
+    color: #444;
+}
+
+.btn {
+    border-radius: 5px;
+}
+
+.btn.full-width {
+    margin: 0 -16px;
+    width: calc(100% + 32px);
+}
+
+.btn-default {
+    background-color:#FCFDFF;
+}
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #FCFDFF;
+}
+#mkdocs-search-query:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+#mkdocs-search-query {
+    font-family:"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #343838;
+    height: 45px;
+}
+
+
+.full-width {
+    width: 100%;
+}
+
+/* BEGIN Table of Contents */
+
+.bs-sidebar, .nav {
+    font-family:"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.bs-sidenav {
+    font-size: 12px;
+}
+
+.bs-sidenav a {
+    font-weight: normal;
+}
+
+.well {
+    background-color: #FCFDFF;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: black;
+}
+
+.navbar-toggle {
+    margin-top: -5px;
+}
+
+.navbar-collapse {
+    padding: 0;
+
+    /* I have no idea why, but custom-bootstrap has a max-height here */
+    max-height: none;
+}
+
+.navigation {
+    font-family:"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    padding: 0;
+    float: none;
+}
+
+.navigation ul {
+    padding: 0 20px;
+}
+
+.navigation li {
+    display: block;
+    margin: 0;
+}
+
+.navigation > li.inert-folder > ul {
+    padding: 0;
+}
+
+/* subpages */
+.navigation ul li ul li {
+    display: list-item;
+}
+
+.navigation li a {
+    color: black;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.navigation li.active > a {
+    font-weight: bold;
+}
+
+.navigation li.inert-folder > a {
+    font-weight: bold;
+    color: #777;
+    cursor: default;
+}
+
+.navigation li.inert-folder > a:hover {
+    text-decoration: none;
+}
+
+/* top-level folders */
+
+.navigation > li.inert-folder > a {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8em;
+    color: #adadad;
+
+    display: block;
+    margin-top: 2em;
+}
+
+
+/* END Table of Contents */
+
+.prev-next {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.3em;
+    margin-bottom: 3em;
+}
+
+.prev-next-footer {
+    margin-top: 4em;
+}
+
+.search-button {
+    display: block;
+    margin: 1.3em 0;
+    padding: 5px 8px;
+    background: #f7f7f7;
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+}
+
+.bs-sidebar {
+    z-index: 150;
+}
+
+.topbar {
+    background-color: #2A2A59;
+    /* mobile only */
+    padding: 0.5em;
+
+    font-family:"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.topbar-contents {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-top: 15px;
+    margin-bottom: 9px;
+}
+
+.topbar-contents, .topbar-contents a {
+    color: rgba(255,255,255,0.7);
+    font-size: 17px;
+    line-height: 26px;
+    font-weight: 200;
+}
+
+.topbar-contents a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.topbar-spacer-55 {
+    display: inline-block;
+    width: 55px;
+}
+
+.topbar .brand {
+    font-size: 28px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.8);
+}
+
+.topbar .brand-logo {
+    height: 28px;
+    margin-top: -15px;
+}
+
+.disabled a {
+    color: #CCC;
+}
+
+.disabled a:hover {
+    text-decoration: none;
+}
+
+.bs-sidebar.affix {
+    top: 127px;
+    bottom: 0;
+}
+
+
+[role="main"]:first-child {
+    margin-top: 0;
+}

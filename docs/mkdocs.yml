@@ -1,0 +1,57 @@
+site_name: Pagedraw Documentation
+pages:
+- Home: index.md
+
+- Philosophy:
+  - Is Pagedraw for developers or designers?: developers-or-designers.md
+  - Workflow: workflow.md
+  - Another WYSIWYG editor?: wysiwyg.md
+  - When should I not use Pagedraw?: why-not.md
+  - Don't edit the generated code: round-tripping.md
+
+- Guides:
+  - Install: install.md
+  - Using the editor: the-editor.md
+  - "Data Bindings / Dynamic Content": data-binding.md
+  - Components: components.md
+  - Multistate: multistates.md
+  - Text Inputs: text-inputs.md
+  - Button Clicks: clicks.md
+  - "Lists / Repeats": lists.md
+  - "Layout / Resizing": layout.md
+  - Importing from Sketch: sketch.md
+  - Fonts: fonts.md
+  - Animations: animations.md
+  - Popovers, modals, and dropdowns: dropdowns.md
+  - Collaboration and Version Control: sharing.md
+  - Integrating with handwritten React code: integrating.md
+  - Importing external libs (i.e. Bootstrap): external-libs.md
+
+- Reference:
+  - Developer Cheatsheet: cheatsheet.md
+  - The Editor: editor-full-reference.md
+  - Docs and Projects: docs.md
+  - Blocks: blocks.md
+  - Stress Tester: stress-test.md
+  - Layout System Spec: layout-spec.md
+  - Pagedraw CLI: cli.md
+  - Webpack: webpack.md
+  - Electron App: electron.md
+  - Privacy Policy: privacy-policy.md
+  - Sample Pagedraw Projects: examples.md
+  - FAQ: faq.md
+
+- Tutorials:
+  - Sketch to Production in 10 minutes: sketch-to-production.md
+  - Building a Component Library: component-library.md
+  - CS50 tutorial: tutorial.md
+
+- Angular:
+  - Getting Started with Pagedraw Angular: getting-started-angular.md
+  - Angular Data and Event bindings: data-binding-angular.md
+
+
+theme: null
+theme_dir: custom-cinder
+extra_javascript:
+    - extra.js

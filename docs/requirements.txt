@@ -1,0 +1,2 @@
+mkdocs==0.16.3
+mkdocs-cinder==0.9.4

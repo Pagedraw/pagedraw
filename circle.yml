@@ -1,0 +1,51 @@
+machine:
+
+  timezone:
+    America/Los_Angeles # Set the timezone
+
+  # Version of node to use
+  node:
+    version:
+      8.9.0
+
+
+  # Override /etc/hosts
+  hosts:
+    circlehost: 127.0.0.1
+    localhost: 127.0.0.1
+
+  # Add some environment variables
+  environment:
+    CIRCLE_ENV: test
+
+## Test Dependencies
+dependencies:
+  override:
+      # Install editor dependencies
+      - yarn install
+
+general:
+  artifacts:
+    # Keep artifacts from e2e screenshot tests around
+    - "e2e-tests/screenshots"
+    - "e2e-tests/lp-screenshots"
+
+
+## Customize test commands
+test:
+  pre:
+    ## Spins up all servers needed for testing
+    - yarn run devserver:
+          background: true
+
+  override:
+    # Runs all tests
+    - yarn js-tests
+    - yarn html-email-tests
+    - yarn layout-vs-preview-test || yarn layout-vs-preview-test
+    - yarn compile-vs-preview-test || yarn compile-vs-preview-test # do it twice in case it fails for being flakey
+    - yarn compile-vs-preview-angular
+    - yarn docs-compile-test
+    - yarn sketch-test
+    - THROTTLE=1 yarn editor-loads-safely-test
+    - node react-scripts/build.js # see if we can do a production build, because sometimes we can't even if everything else is green

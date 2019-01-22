@@ -1,0 +1,26 @@
+{
+  "name": "pagedraw-imports",
+  "version": "0.1.3",
+  "description": "Utilities that help you import external code into Pagedraw",
+  "main": "dist/bundle.js",
+  "files": [
+    "dist/"
+  ],
+  "author": "Pagedraw",
+  "devDependencies": {
+    "coffeescript": "2.3.0",
+    "uglify-js": "3.3.27"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "dependencies": {
+    "lodash": "4.17.4"
+  },
+  "scripts": {
+    "build": "rm -rf dist/ && coffee -ct -o dist/pre.js src/pd-utils.cjsx && uglifyjs dist/pre.js > dist/bundle.js && rm dist/pre.js",
+    "prepublish": "yarn build"
+  },
+  "license": "ISC"
+}

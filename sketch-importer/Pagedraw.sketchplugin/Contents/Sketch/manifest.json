@@ -1,0 +1,24 @@
+{
+  "author" : "",
+  "commands" : [
+    {
+      "script" : "importer.cocoascript",
+      "name" : "Pagedraw",
+      "handlers" : {
+        "run" : "onRun"
+      },
+      "identifier" : "com.bohemiancoding.sketch.runscriptidentifier"
+    }
+  ],
+  "menu" : {
+    "items" : [
+      "com.bohemiancoding.sketch.runscriptidentifier"
+    ],
+    "title" : "Pagedraw"
+  },
+  "identifier" : "com.example.sketch.266f77df-235b-4458-bd5a-47060aa46b29",
+  "version" : "1.0",
+  "description" : "",
+  "authorEmail" : "",
+  "name" : "Pagedraw"
+}

@@ -1,0 +1,29 @@
+build/
+dist/
+node_modules/
+*.sublime-workspace
+localdev/
+*.log
+*.pyc
+*.swp
+*.swo
+*.swm
+*.swn
+depgraph.png
+.idea/
+cli/.env
+.vscode/
+artifacts/
+sample-app/
+uploads/
+offline-docserver-data/
+compiler-blobs/*
+
+# static/ and firebase/ are copied directly into static hosting, so we don't want
+# anything in there that we could forget is in there
+!static/**
+!firebase/**
+
+# okay but .DS_Store should *always* be ignored
+.DS_Store
+

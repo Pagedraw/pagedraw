@@ -1,0 +1,42 @@
+<html>
+<head>
+    <!-- FIXME: these stylesheets need to come from a shared source of truth -->
+    <link rel="stylesheet" href="./build/bootstrap-namespaced.css">
+    <link rel="stylesheet" href="./build/semantic-namespaced.css">
+    <link rel="stylesheet" href="./build/vendor/quill-0.20.0/quill.base.css">
+    <link rel="stylesheet" href="./build/vendor/hopscotch/hopscotch.min.css">
+    <link rel="stylesheet" href="./build/editor.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <script type="text/javascript">
+    window.pd_params={
+      "route":"electron_app"
+    };
+    window.pd_config={
+      "environment":"production",
+      "metaserver":"http://localhost:4000",
+      "static_server":"", // this server
+      "docserver_host":"https://pagedraw-1226.firebaseio.com",
+      "compileserver_host":"http://localhost:5000",
+      "sketch_importer_server_host":"http://localhost:2083",
+      "external_code_server_host":"http://localhost:3333",
+      "editor_css_urls":[ // FIXME dups from above
+        "./build/bootstrap-namespaced.css",
+        "./build/semantic-namespaced.css",
+        "./build/vendor/quill-0.20.0/quill.base.css",
+        "./build/vendor/hopscotch/hopscotch.min.css",
+        "./build/editor.css",
+        "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700",
+        "https://fonts.googleapis.com/css?family=Roboto:300,400",
+        "https://fonts.googleapis.com/icon?family=Material+Icons"
+      ]
+    };
+    </script>
+
+    <div id="app"></div>
+    <script src="./build/script.js"></script>
+</body>
+</html>

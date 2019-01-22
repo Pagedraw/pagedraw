@@ -1,0 +1,15 @@
+{% set next_url = page.meta.next_page[0] if page.meta.next_page else next_page.url if next_page else None %}
+{% set prev_url = page.meta.previous_page[0] if page.meta.previous_page else previous_page.url if previous_page else None %}
+
+<div class="prev-next">
+    <div {% if not prev_url %}class="disabled"{% endif %}>
+        <a rel="next" {% if prev_url %}href="{{ prev_url }}"{% endif %}>
+            ← Previous
+        </a>
+    </div>
+    <div {% if not next_url %}class="disabled"{% endif %}>
+        <a rel="prev" {% if next_url %}href="{{ next_url }}"{% endif %}>
+            Next →
+        </a>
+    </div>
+</div>

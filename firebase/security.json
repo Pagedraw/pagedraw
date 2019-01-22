@@ -1,0 +1,14 @@
+{
+  "rules": {
+    "pages": {
+      "$page_id": {
+        ".write": true,
+        ".read": true
+      }
+    },
+    "cli_info": {
+      ".write": false,
+      ".read": true
+    }
+  }
+}

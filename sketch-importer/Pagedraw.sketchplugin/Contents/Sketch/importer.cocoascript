@@ -1,0 +1,309 @@
+
+var host = "http://pagedraw.io/";
+
+function unicodeToChar(text) {
+   return text.replace(/\\U[\dA-F]{4}/gi,
+          function (match) {
+               return String.fromCharCode(parseInt(match.replace(/\\U/g, ''), 16));
+          });
+}
+
+// Wrapper of String in case we want to do any processing here (like a different encoding)
+function toString(text) {
+    return String(text);
+}
+
+function postJsonShell(url, data) {
+    var task = NSTask.alloc().init();
+    task.setLaunchPath("/usr/bin/curl");
+    var args = NSArray.arrayWithObjects(
+        "-v",
+        "-X", "POST",
+        "--header", "Content-Type: application/json",
+        "-d", JSON.stringify(data),
+        url, nil);
+    task.setArguments(args);
+
+    var outputPipe = [NSPipe pipe];
+    [task setStandardOutput:outputPipe];
+
+    task.launch();
+
+    var outputData = [[outputPipe fileHandleForReading] readDataToEndOfFile];
+    var outputString = [[[NSString alloc] initWithData:outputData encoding:NSUTF8StringEncoding]]; // Autorelease optional, depending on usage.
+
+    return JSON.parse(outputString);
+}
+
+function postJson(url, data) {
+    var url = [NSURL URLWithString:url];
+    var string = NSString.stringWithString_(JSON.stringify(data));
+    var jsonData = [string dataUsingEncoding:NSUTF8StringEncoding];
+
+    var request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:[NSString stringWithFormat:@"%d", [jsonData length]] forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBody:jsonData];
+
+    var connection = [NSURLConnection connectionWithRequest:request delegate:self];
+}
+
+// This will make a slice at the current position of the layer
+// Slices include other things that are on canvas in the same area as this layer
+// (including other layers). If you wish to export the layer alone, see outputLayerAsPng
+function makeSliceAndResizeWithFactor(layer, factor) {
+    var loopLayerChildren = [[layer children] objectEnumerator],
+        rect = [MSSliceTrimming trimmedRectForSlice:layer],
+        isSliceLayer = false,
+        slice
+    ;
+
+    // Check for MSSliceLayer and overwrite the rect if present
+    while (layerChild = [loopLayerChildren nextObject]) {
+        if ([layerChild class] == 'MSSliceLayer') {
+            isSliceLayer = true;
+            rect  = [MSSliceTrimming trimmedRectForSlice:layerChild];
+        }
+    }
+
+    slice = [MSExportRequest requestWithRect:rect scale:(factor / this.baseDensity)];
+
+    if (!isSliceLayer) {
+        slice.shouldTrim = true;
+    }
+    slice.saveForWeb = true;
+    // slice.compression = 0;
+    slice.includeArtboardBackground = false;
+    return slice;
+ }
+
+
+// Borrowed from
+// https://github.com/bunguu/SketchExportForRepliaPlugin/blob/master/ExportForReplia.sketchplugin/Contents/Sketch/export_layers.js
+function outputLayerAsPng(doc, layer, path, maskRect) {
+
+  // Clear all exportable sizes
+    [layer exportOptions].removeAllExportFormats()
+
+    [[layer exportOptions] addExportFormat];
+    var format = [[[layer exportOptions] exportFormats] lastObject];
+    //format.format = "png";
+    [format setFileFormat:"png"];
+    [format setScale: 1];
+    [format setName:""];
+
+  [[doc currentPage] deselectAllLayers];
+  [layer select:true byExpandingSelection:true];
+
+  var rect = [layer absoluteInfluenceRect];
+  if (maskRect) {
+    var left = Math.max(rect.origin.x,maskRect.left + _documentLeft);
+    var top = Math.max(rect.origin.y,maskRect.top + _documentTop);
+    var right = Math.min(rect.origin.x+rect.size.width,maskRect.right + _documentLeft);
+    var bottom = Math.min(rect.origin.y+rect.size.height,maskRect.bottom +  _documentTop);
+    rect = CGRectMake(left,top,right-left,bottom-top);
+  }
+
+    var slice = [MSExportRequest exportRequestFromExportFormat:format layer:layer inRect:rect useIDForName:false];
+
+  [doc saveArtboardOrSlice: slice toFile: path];
+}
+
+function exportImageLayer(doc, layer) {
+    var path = "/tmp/pagedraw/" + layer.objectID() + ".png";
+    outputLayerAsPng(doc, layer, path);
+    return path;
+}
+
+// Fixme: This should also be a NSURLConnection Post request. No need to shell out. But utlimately
+// we want to do all the Post requests in parallel to speed up the uploading process
+function uploadImage(path) {
+    var task = NSTask.alloc().init()
+    task.setLaunchPath("/usr/bin/curl");
+    // Using demopublickey because our public key blew through the limit
+    var args = NSArray.arrayWithObjects(
+        "-F", "UPLOADCARE_PUB_KEY=demopublickey",
+        "-F", "UPLOADCARE_STORE=1",
+        "-F", "file=@" + path,
+        "https://upload.uploadcare.com/base/", nil);
+    task.setArguments(args);
+
+    var outputPipe = [NSPipe pipe];
+    [task setStandardOutput:outputPipe];
+
+    task.launch();
+
+    var outputData = [[outputPipe fileHandleForReading] readDataToEndOfFile];
+    var outputString = [[[NSString alloc] initWithData:outputData encoding:NSUTF8StringEncoding]]; // Autorelease optional, depending on usage.
+
+    return JSON.parse(outputString)["file"];
+}
+
+function uploadImageLayer(doc, layer) {
+    var path = exportImageLayer(doc, layer);
+    return uploadImage(path);
+}
+
+function typeOf(obj) {
+    print(toString.call(obj));
+}
+
+function onRun(context) {
+    var doc = context.document;
+    var page = doc.currentPage();
+    var artboard = page.currentArtboard();
+
+    var DEBUG = false;
+
+    var fontMapper = {
+    '.SFNSDisplay-Regular': 'San Francisco'
+    };
+
+    var childrenLayers = function(layer) {
+        if (layer.isKindOfClass(MSSymbolInstance)) {
+            return layer.symbolMaster().layers();
+        }
+
+        if (layer.layers && layer.layers().length > 0)
+            return layer.layers();
+
+        return [];
+    };
+
+    var hasChildren = function(layer) {
+        return childrenLayers(layer).length > 0;
+    };
+
+    var isLeaf = function(layer) {
+    return !hasChildren(layer);
+    };
+
+    var rgbaTransform = function(str) {
+        var rgba_match = /rgba\((.*),(.*),(.*),(.*)\)/.exec(str).slice(1).map(Number)
+        [r, g, b, a] = rgba_match;
+        var scale = function(color) { Math.round(color * 255) };
+        return "rgba(" + (scale(r)) + ", " + (scale(g)) + ", " + (scale(b)) + ", " + a + ")";
+    };
+
+    var blocks = [];
+    var imageHashes = [];
+
+    var isImage = function(layer) {
+        if (layer.isKindOfClass(MSTextLayer))
+            return false;
+        else if (layer.isKindOfClass(MSRectangleShape))
+            return false;
+        else if (hasChildren(layer))
+            return childrenLayers(layer).every(isImage);
+
+        return true;
+    };
+
+    var importLayer = function(layer, depth, parent_x, parent_y) {
+        if (!layer.isVisible()) { return null; }
+
+        var frame = layer.frame();
+
+        // Note that every string below should be passed to the String() method
+        // before going into the json, because CocoaScript strings are MOBoxedObjects
+        // by default which cannot be JSON serialized
+        var block = {
+          top: Math.round(parent_y + frame.y()),
+          left: Math.round(parent_x + frame.x()),
+          width: Math.round(frame.width()),
+          height: Math.round(frame.height()),
+          name: toString(layer.name())
+        };
+
+        var btype;
+
+        // Image Block
+        // A layer will be exported as an image block if all of its recursive children layers are also
+        // images (no text/rectangle/etc present)
+        if (isImage(layer)) {
+            btype = 'image';
+
+            // exports the layer as a PNG and then upload it to the ucare CDN
+            // FIXME: This stuff is really slow and we block here, which is a bad idea
+            // We should probably do all of the upload requests together in parallel at the end
+            var hash = uploadImageLayer(doc, layer);
+            imageHashes.push(hash);
+
+            block.url = "https://ucarecdn.com/" + hash + "/"
+
+        // Text Block
+        } else if (layer.isKindOfClass(MSTextLayer)) {
+            btype = 'text';
+
+            block.htmlContent = toString(layer.stringValue())
+            block.fontSize = layer.fontSize()
+            block.fontFamily = toString(layer.fontPostscriptName())
+            block.fontColor = toString("#" + layer.textColor().hexValue())
+
+        // Layout Block
+        } else if (layer.isKindOfClass(MSRectangleShape)) {
+            btype = 'layout';
+
+            // For some reason, a Sketch rectangle is an MSRectangleShape object
+            // wrapped inside a MSShapeGroup object. The MSSHapeGroup is the one
+            // that has the name as it appears in the layer list and the styles
+            block.name = toString(layer.parentGroup().name());
+
+            var style = layer.parentGroup().style();
+            block.color = toString("#" + style.fills()[0].colorGeneric().hexValue());
+
+        } else if (hasChildren(layer)) {
+            childrenLayers(layer).forEach(function (l) { importLayer(l, depth + 1, block.left, block.top); })
+            return null;
+        } else {
+            log('Unknown class ' + layer.className())
+            log(layer)
+            return null;
+        }
+
+        block.__ty = "/block/" + btype;
+
+        // Let's make sure the name of the block is a string
+        blocks.push(block);
+        return block;
+    };
+
+    doc.showMessage("Importing artboard: " + artboard.name())
+
+    // rulerBase defines the absolute position of the artboard
+    // on the global canvas. since artboard.frame() has some position, we call importLayer
+    // with the negative of that in order to place the artboard starting at position (0,0)
+    var rulerBase = artboard.rulerBase();
+    importLayer(artboard, 0, -rulerBase.x, -rulerBase.y);
+
+    var app = NSApplication.sharedApplication();
+
+    var doc_json = {
+    "blocks": blocks,
+    "doc_width": artboard.absoluteRect().width(),
+    "url": artboard.name() + "-" + Math.random().toString(36).substring(7)
+    };
+    var err;
+    var post_json = {"doc": JSON.stringify(doc_json), "app_id": 1};
+
+    // This will add the imported page to the App.init_app in the metaserver
+    // FIXME: this endpoint no longer exists.  But this is also super deprecated, so who cares.
+    var response = postJsonShell(host + "pages/from_doc.json", post_json);
+
+    // This is the url the user must visit to claim their newly imported page into their own app
+    var claim_url = host + "pages/" + response['id'] + "/add_to_my_app";
+    app.displayDialog_withTitle("Imported a total of " + blocks.length + " blocks. Uploaded " + imageHashes.length +  " images. Closing this dialog will import the page into your app.", "Page Imported Succesfully");
+
+    var task = NSTask.alloc().init();
+    task.setLaunchPath("/usr/bin/open");
+    var args = NSArray.arrayWithObjects(claim_url, nil);
+    task.setArguments(args);
+
+    var outputPipe = [NSPipe pipe];
+    [task setStandardOutput:outputPipe];
+
+    task.launch();
+
+};

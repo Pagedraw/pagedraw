@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="row-fluid">
+      <div id="main-content" class="span12">
+        <h1 style="text-align: center">
+            <img src="/img/down_pagedog.png" style="width: 80%; margin-top: 2em;" />
+            <div style="margin-top: 25px; font-size: 60px; margin-bottom: 15px;">404</div>
+            <div class="lead" style="text-align: center"><strong>Page not found</strong></p>
+        </h1>
+      </div>
+    </div>
+
+    <!-- Collapsed navigation -->
+    <div>
+        <!-- Expander button -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+        <!-- Main title -->
+        <strong>{{ site_name }}</strong>
+    </div>
+
+    <!-- Main navigation -->
+    <ul class="navigation">
+    {% for nav_item in nav %}
+        {% include "nav-sub.html" %}
+    {% endfor %}
+    </ul>
+
+    <a class="search-button" href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+        <i class="fa fa-search"></i> Search
+    </a>
+
+</div>
+
+{% endblock %}

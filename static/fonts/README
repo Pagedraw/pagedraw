@@ -1,0 +1,3 @@
+Copied from static/vendor/bootstrap-3.3.6/dist
+
+I'd like bootstrap-namespaced.less to generate the right relative paths, but it isn't and copying the fonts to this location is easier

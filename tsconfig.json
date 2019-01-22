@@ -1,0 +1,28 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "strict": true,
+        "target": "es5",
+        "module": "commonjs",
+        "sourceMap": true,
+        "preserveConstEnums": true,
+        "baseUrl": "./src",
+        "outDir": "./artifacts/ts",
+        "declaration": true,
+        "declarationDir": "./artifacts/ts.d",
+        "jsx": "react",
+        "paths": {
+            "*": [
+                "node_modules/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts",
+        "cli"
+    ]
+}

@@ -1,0 +1,42 @@
+<html>
+<head>
+    <!-- FIXME: these stylesheets need to come from a shared source of truth -->
+    <link rel="stylesheet" href="http://localhost:3000/bootstrap-namespaced.css">
+    <link rel="stylesheet" href="http://localhost:3000/semantic-namespaced.css">
+    <link rel="stylesheet" href="http://localhost:3000/vendor/quill-0.20.0/quill.base.css">
+    <link rel="stylesheet" href="http://localhost:3000/vendor/hopscotch/hopscotch.min.css">
+    <link rel="stylesheet" href="http://localhost:3000/editor.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <script type="text/javascript">
+    window.pd_params={
+      "route":"electron_app"
+    };
+    window.pd_config={
+      "environment":"development",
+      "metaserver":"http://localhost:4000",
+      "static_server":"http://localhost:3000",
+      "docserver_host":"https://pagedraw-1226.firebaseio.com",
+      "compileserver_host":"http://localhost:5000",
+      "sketch_importer_server_host":"http://localhost:2083",
+      "external_code_server_host":"http://localhost:3333",
+      "editor_css_urls":[ // FIXME dups from above
+        "http://localhost:3000/bootstrap-namespaced.css",
+        "http://localhost:3000/semantic-namespaced.css",
+        "http://localhost:3000/vendor/quill-0.20.0/quill.base.css",
+        "http://localhost:3000/vendor/hopscotch/hopscotch.min.css",
+        "http://localhost:3000/editor.css",
+        "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700",
+        "https://fonts.googleapis.com/css?family=Roboto:300,400",
+        "https://fonts.googleapis.com/icon?family=Material+Icons"
+      ]
+    };
+    </script>
+
+    <div id="app"></div>
+    <script src="http://localhost:3000/script.js" crossorigin="anonymous"></script>
+</body>
+</html>

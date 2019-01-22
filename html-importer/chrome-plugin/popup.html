@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Pagedraw importer</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      .output {
+        white-space: pre;
+        flex: 1 1 auto;
+      }
+    </style>
+    <script src="vendor/jquery-2.1.4.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="url" placeholder="url...">
+      <input type="submit">
+    </form>
+    <hr />
+    <div class="output"></div>
+  </body>
+</html>
+

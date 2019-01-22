@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+{{page.meta.page_title[0]}}
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1" role="main">
+        {{content}}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,1 @@
+require('coffee-react/register');

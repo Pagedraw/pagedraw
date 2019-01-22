@@ -1,0 +1,29 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "strict": true,
+        "noImplicitAny": false,
+        "target": "es2016",
+        "module": "commonjs",
+        "preserveConstEnums": true,
+        "baseUrl": ".",
+        "outDir": "./artifacts",
+        "sourceMap": true,
+        "declaration": true,
+        "declarationDir": "./artifacts/ts.d",
+        "removeComments": true,
+        "moduleResolution": "node",
+        "paths": {
+            "*": [
+                "node_modules/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}
