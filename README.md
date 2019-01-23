@@ -7,7 +7,7 @@ You can download it at [https://github.com/Pagedraw/pagedraw/releases/download/1
 
 Pagedraw is not currently under development.  We do not recommend using it for production.  Please fork and use it for something cool!
 
-Here is a [blog post](https://medium.com/@gabriel_20625/technical-lessons-from-building-a-compiler-startup-for-3-years-4473405161cd?fbclid=IwAR1xjLudFtOrh5m5pr2cSo9aNhXncC3a519jUTmBKMixIRbXo_c72dz1COU) about some lessons we took from working on Pagedraw.
+Here is a [blog post](https://medium.com/@gabriel_20625/technical-lessons-from-building-a-compiler-startup-for-3-years-4473405161cd?fbclid=IwAR1xjLudFtOrh5m5pr2cSo9aNhXncC3a519jUTmBKMixIRbXo_c72dz1COU) with some lessons we took from working on Pagedraw.
 
 
 ## Usage
