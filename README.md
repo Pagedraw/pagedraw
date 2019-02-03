@@ -54,16 +54,13 @@ yarn run-electron
 
 ### Config for development
 
-The first time you run in development, in the Electron developer tools console, run `__openConfigEditor()` and set your local config to:
+Turn on asserts the first time you run in development mode, which will help you debug.  In the Electron developer tools console, run `__openConfigEditor()` and set your local config to
 ```json
 {
-  "handleRawDocJson": true,
   "crashButton": true,
   "asserts": true
 }
 ```
-
-To get some debugging tools. In particular, make sure to turn asserts on.
 
 ### Running tests
 
