@@ -78,3 +78,7 @@ yarn test
 - Same thing for fonts. Today they're being stored directly in the Pagedraw doc as base64 strings and also injected into the compiled code as such
 - Make Sketch Importer into a Sketch to Pagedraw converter command instead of a server.
 - Compile-Check can work with local `/compiler-blobs`, and not depend on S3 to host them.  Look in `/compiler-blob-builder` and `/deploy-checks/fetch-other-compiler-build.js`.
+
+---
+
+The code in the repository is being provided to you under an open source license.  There are multiple contributors to this code. All contributions provided after 2/1/2019 were done in a personal capacity, and the license you receive to code following 2/1/2019 is from the contributors personally and not their respective employers.
