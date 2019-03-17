@@ -63,7 +63,7 @@ config =
     layerList: true
     remapSymbolsToExistingComponents: true
     showSelectedInCodeSidebar: true
-    angular_support: false
+    angular_support: true
     realExternalCode: true
     nonComponentMultistates: false
     funkyInstances: false
