@@ -3,8 +3,6 @@ Pagedraw
 
 Pagedraw is a UI builder for React web apps.  It works like a Sketch or Figma style design tool, but emits good quality JSX code.  You can play with a demo on the web without installing at [https://pagedraw.io/tutorials/basics](https://pagedraw.io/tutorials/basics). Videos about pagedraw can be found on [Youtube](https://www.youtube.com/channel/UCgAP0A2HDlk81eVKOaChzHg). See [https://pagedraw.io/](https://pagedraw.io/) for more info.
 
-You can download it at [https://github.com/Pagedraw/pagedraw/releases/download/1.0/Pagedraw.zip](https://github.com/Pagedraw/pagedraw/releases/download/1.0/Pagedraw.zip).
-
 Pagedraw is not currently under development.  We do not recommend using it for production.  Please fork and use it for something cool!
 
 Here is a [blog post](https://medium.com/@gabriel_20625/technical-lessons-from-building-a-compiler-startup-for-3-years-4473405161cd?fbclid=IwAR1xjLudFtOrh5m5pr2cSo9aNhXncC3a519jUTmBKMixIRbXo_c72dz1COU) with some lessons we took from working on Pagedraw.
@@ -12,7 +10,18 @@ Here is a [blog post](https://medium.com/@gabriel_20625/technical-lessons-from-b
 
 ## Usage
 
-See the structure of [https://github.com/pagedraw/sample-app](https://github.com/pagedraw/sample-app)
+Download the final release at [https://github.com/Pagedraw/pagedraw/releases/download/1.0/Pagedraw.zip](https://github.com/Pagedraw/pagedraw/releases/download/1.0/Pagedraw.zip).
+
+Clone [https://github.com/pagedraw/sample-app](https://github.com/pagedraw/sample-app) and use it as the scaffolding for your app.  It's based on create-react-app; all very standard.  You'll want to do the ususal `yarn` to install dependencies.
+
+Open the Pagedraw app, which will ask you to pick a file.  Pick `sample-app/main.pagedraw.json` to open.
+
+Run `yarn start` in `sample-app` (or whatever you've renamed it).  This is just the regular create-react-app's `yarn start`.  Once you have your localhost development environment up, try doing things around in Pagedraw.  It should live update in the localhost environment.  You're all set up!
+
+
+## Adding Pagedraw to an existing project
+
+Use [https://github.com/pagedraw/sample-app](https://github.com/pagedraw/sample-app) as a reference.
 
 Put a `main.pagedraw.json` in the root of your repo.  All files built by Pagedraw will be written into a `/src/pagedraw/` folder.  These are regular JSX/CSS files, so you can import them just like the rest of your code.
 
