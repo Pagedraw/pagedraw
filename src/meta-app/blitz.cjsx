@@ -48,7 +48,7 @@ module.exports = createReactClass
             zIndex: 5000
 
         <SplitPane split="horizontal" defaultSize={"55%"}>
-            <div style={position: 'relative', width: '100%', height: '100%'}>
+            <div style={position: 'relative', width: '100%', height: '100%', overflow: 'hidden'}>
                 {if @overlay
                     [
                         <div onClick={@hideOverlay} style={_l.extend {}, overlayFontStyles, {cursor: 'pointer', zIndex: 5001, position: 'absolute', top: 30, right: 30}}>x</div>
