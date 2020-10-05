@@ -20,6 +20,7 @@ module.exports = createReactClass
     componentDidMount: ->
         @scalingView = ReactDOM.findDOMNode(@refs.scaling)
         @props.viewportManager.registerViewportOwner(this)
+        @refs.scrollView.addEventListener('wheel', @handleMousePinchScroll, passive: false)
 
     componentWillUnmount: ->
         @props.viewportManager.unregisterViewportOwner()
@@ -33,19 +34,20 @@ module.exports = createReactClass
 
 
     render: ->
-        <div ref="scrollView" className="editor-scrollbar"
-            style={ _.extend {}, @props.style,
-                # make this region scroll
-                overflow: 'auto'
+        <div ref="scrollView" className="editor-scrollbar" style={ _.extend {}, @props.style,
+            # make this region scroll
+            overflow: 'auto'
 
-                # https://css-tricks.com/almanac/properties/o/overflow-anchor/
-                overflowAnchor: 'none'
+            # https://css-tricks.com/almanac/properties/o/overflow-anchor/
+            overflowAnchor: 'none'
 
-                # Without z-index higher than ref.scaling's, ref.scaling
-                # will cover our scroll bars.  Don't know why.
-                zIndex: 2
-            }
-            onWheel={@handleMousePinchScroll}>
+            # Without z-index higher than ref.scaling's, ref.scaling
+            # will cover our scroll bars.  Don't know why.
+            zIndex: 2
+
+            # this elem has the onWheel handler, it's just added
+            # manually, because of a Chrome intervention we have to work around
+        }>
             {@stlyeTagForZoom(@zoom)}
             <div style={position: 'relative'}>
                 <div style={
@@ -124,28 +126,28 @@ module.exports = createReactClass
             [@refs.scrollView.scrollLeft, @refs.scrollView.scrollTop] = [x, y]
 
 
-    handleMousePinchScroll: (e) ->
+    handleMousePinchScroll: (evt) ->
         # for some reason, scroll events with ctrlKey=true are how we get pinch events
-        if e.nativeEvent.ctrlKey
+        if evt.ctrlKey
             zoomMultiplier = 80
         # We also consider metaKey + scroll to be zoom
-        else if e.nativeEvent.metaKey
+        else if evt.metaKey
             zoomMultiplier = 2000
         # other events are not considered zoom events
         else
             return
 
-        e.preventDefault()
+        evt.preventDefault()
 
         # get how much we're going to zoom in by
-        pinchOut = e.deltaY
+        pinchOut = evt.deltaY
         newZoomFactor = 1 / (1 + pinchOut/zoomMultiplier)
         newZoom = @zoom * newZoomFactor
         return if newZoomFactor == 1
 
         target_bounds = @scalingView.getBoundingClientRect()
 
-        @props.viewportManager.zoomOnCoordinates((e.clientX - target_bounds.left) / @zoom, (e.clientY - target_bounds.top) / @zoom, newZoom)
+        @props.viewportManager.zoomOnCoordinates((evt.clientX - target_bounds.left) / @zoom, (evt.clientY - target_bounds.top) / @zoom, newZoom)
 
     getViewport: ->
         {scrollTop, scrollLeft, clientWidth, clientHeight} = @refs.scrollView
