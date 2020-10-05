@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- COMMON TAGS -->
+    <meta charset="utf-8">
+
+    <title>Pagedraw — Effortlessly turn mockups into functional UI code</title>
+    <!-- Search Engine -->
+    <meta name="description" content="Design your web UI, then use the design directly from code.  No more time wasted translating mockups to JSX and CSS.  Using Pagedraw is like adding another React developer to your team.">
+    <meta name="image" content="https://ucarecdn.com/7bbddae0-feed-4db9-80fb-8188f941bf23/banner.png">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="Pagedraw — Effortlessly turn mockups into functional UI code">
+    <meta itemprop="description" content="Design your web UI, then use the design directly from code.  No more time wasted translating mockups to JSX and CSS.  Using Pagedraw is like adding another React developer to your team.">
+    <meta itemprop="image" content="https://ucarecdn.com/7bbddae0-feed-4db9-80fb-8188f941bf23/banner.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pagedraw — Compile UI Mockups to React Code">
+    <meta name="twitter:description" content="Design your web UI, then use the design directly from code.  No more time wasted translating mockups to JSX and CSS.  Using Pagedraw is like adding another React developer to your team.">
+    <meta name="twitter:site" content="@PagedrawIO">
+    <meta name="twitter:creator" content="@PagedrawIO">
+    <meta name="twitter:image" content="https://ucarecdn.com/7bbddae0-feed-4db9-80fb-8188f941bf23/banner.png">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="Pagedraw — Compile UI Mockups to React Code">
+    <meta name="og:description" content="Design your web UI, then use the design directly from code.  No more time wasted translating mockups to JSX and CSS.  Using Pagedraw is like adding another React developer to your team.">
+    <meta name="og:image" content="https://ucarecdn.com/7bbddae0-feed-4db9-80fb-8188f941bf23/banner.png">
+    <meta name="og:url" content="https://pagedraw.io/">
+    <meta name="og:site_name" content="Pagedraw">
+    <meta name="og:type" content="website">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <script>
+    if (window.Rollbar) {
+      window.Rollbar.configure({"payload":{"client":{"javascript":{"source_map_enabled":true,"code_version":"{{ code_version }}","guess_uncaught_frames":true}}}});
+    }
+    </script>
+</head>
+<body>
+    <div id="app">
+      {{{ body }}}
+    </div>
+
+    <script src="{{ hydrate_js_path }}" crossorigin="anonymous"></script>
+    <!-- crossorigin is to unblock Rollbar from reading our stacktraces since they're on a different domain -->
+
+
+    <!-- Segment analytics -->
+    <script>
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";
+    analytics.load("1rWnDj6v85ocJNHZThG8xmlAYGtKKHcC");
+
+    analytics.page();
+    }}();
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google AdWords: 821312927 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-821312927"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-821312927');
+    </script>
+</body>
+</html>

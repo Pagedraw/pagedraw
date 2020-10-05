@@ -8,7 +8,7 @@ config = require '../config'
 
 LandingDesktop = createReactClass
     render: ->
-        playground = <iframe id="playground" style={minHeight: 800, minWidth: 1000, border: 0} src="/playground">
+        playground = <iframe id="playground" style={minHeight: 800, minWidth: 1000, border: 0} src="/playground.html">
             Iframes not supported
         </iframe>
 
@@ -32,20 +32,22 @@ LandingDesktop = createReactClass
             margin: 'auto'
             padding: 50
             minHeight: '80vh'
-            maxWidth: 980
+            maxWidth: 1080
             display: 'flex'
             flexDirection: 'column'
             justifyContent: 'center'
         }>
             <h1 style={
                 fontSize: '87px'
+                marginTop: '35px'
+                lineHeight: '1.2em'
             }>
-                Pagedraw is going Open Source!
+                Pagedraw is shutting down and going Open Source
             </h1>
             <div style={
                 textAlign: 'right'
                 marginTop: -50
-                marginBottom: 44
+                marginBottom: 56
                 lineHeight: '15px'
             }>
                 <a href="https://github.com/Pagedraw/pagedraw" style={color: 'blue'}>
@@ -62,21 +64,23 @@ LandingDesktop = createReactClass
                     </span>
                 </a>
             </div>
-            <ul style={
-                marginLeft: '-33px'
-                fontSize: '20px'
-                lineHeight: '33px'
+            <div style={
+                fontSize: '17px'
+                lineHeight: '29px'
             }>
-              <li>Shutting down company</li>
-              <li>Not recommended for production as we are not offering paid support</li>
-              <li>Differences from Hosted version:</li>
-                <ul>
-                    <li><code>.pagedraw.json</code> files</li>
-                    <li>Pagedraw library</li>
-                </ul>
-              <li>Migration pathway for existing users</li>
-              <li>Pagedraw will remain as it was for 2 mo more</li>
-            </ul>
+                <p>
+                    We want to give one last, big thank you to all our users, supporters, and investors.  It’s been An Incredible Journey.  We’re moving on, but We’re very proud of the technology we’ve built.  We’re releasing it open source both so you can keep using it, and so we can share our ideas about how to build UI tools.
+                </p>
+                <p>
+                    Ultimately, we think Pagedraw is the wrong product.  We think you can get 90% of the benefits of Pagedraw by just using JSX better.  Our findings on this will be controversial, as they go entirely against the current “best practices,” so we’ll save them for a later blog post.
+                </p>
+                <p>
+                    As promised, you can simply stop using Pagedraw— all the generated code already lives in your repo!  If you’re using Pagedraw in production, contact us if you’re worried about a more complex migration pathway.  You’ll be able to download your <code>.pagedraw.json</code> files from our servers and use them with the newly released, open source, desktop app. The web version will stay up through April 2019 so you can migrate at your convenience.
+                </p>
+                <p style={fontWeight: '100', textStyle: 'italic', textAlign: 'right'}>
+                    — Jared Pochtar and Gabriel Guimaraes
+                </p>
+            </div>
         </div>
 
         <div>

@@ -37,6 +37,7 @@
     "tree-kill": "1.2.0"
   },
   "dependencies": {
+    "handlebars": "^4.7.6",
     "@blueprintjs/core": "2.3.1",
     "@stackblitz/sdk": "1.0.0",
     "async": "2.5.0",
@@ -164,6 +165,7 @@
   },
   "prodStaticServer": "https://static-pagedraw.surge.sh/",
   "scripts": {
+    "update-marketing-site": "marketing-site/deploy.sh",
     "build-electron-app": "bin/build-electron-app.sh",
     "run-electron": "cd desktop-app && yarn start",
 
