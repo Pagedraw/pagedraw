@@ -135,7 +135,7 @@ render = ->
                                     <div style={{"display": "flex", "flexShrink": "0"}}>
                                         <div style={{"display": "flex", "flexDirection": "column", "paddingBottom": 17}}>
                                             <div style={{"display": "flex", "flexShrink": "0"}}>
-                                                <div style={{"display": "flex", "flexDirection": "column", "paddingTop": 9, "paddingBottom": 13, "backgroundImage": "url('https://pagedraw-images.s3-us-west-1.amazonaws.com/1526426062120295-1511943212004-D56D529C-FF2E-4429-86AE-CCAE44A62B4A.png')", "backgroundSize": "100% 100%"}}>
+                                                <div style={{"display": "flex", "flexDirection": "column", "paddingTop": 9, "paddingBottom": 13, "backgroundImage": "url('https://complex-houses.surge.sh/from-s3/1526426062120295-1511943212004-D56D529C-FF2E-4429-86AE-CCAE44A62B4A.png')", "backgroundSize": "100% 100%"}}>
                                                     <div style={{"display": "flex", "flexShrink": "0", "paddingLeft": 6, "paddingRight": 5}}>
                                                         <div style={{"width": 29, "flexShrink": "0", "fontFamily": "\"Lato\", sans-serif", "color": "rgb(0, 0, 32)", "fontSize": 11, "lineHeight": "18.75px", "letterSpacing": 0, "fontWeight": "normal", "fontStyle": "normal", "textDecoration": "none", "textAlign": "center", "wordWrap": "break-word"}}>
                                                             //logo
@@ -473,17 +473,17 @@ render = ->
                     <div style={{"display": "flex", "flexShrink": "0", "paddingLeft": 116, "paddingRight": 116}}>
                         <div style={{"display": "flex", "flexDirection": "column", "paddingTop": 14, "paddingBottom": 14, "borderRadius": 100, "background": "rgb(75, 75, 149)"}}>
                             <div style={{"display": "flex", "flexShrink": "0", "paddingLeft": 15, "paddingRight": 16}}>
-                                <img src="https://pagedraw-images.s3.amazonaws.com/4337305511133633-1512436805279-1756A8E6-7A51-454D-B52E-EB7A7DA1A056.png" style={{"width": 17, "height": 20, "flexShrink": "0", "borderWidth": 0}} /> 
+                                <img src="https://complex-houses.surge.sh/from-s3/4337305511133633-1512436805279-1756A8E6-7A51-454D-B52E-EB7A7DA1A056.png" style={{"width": 17, "height": 20, "flexShrink": "0", "borderWidth": 0}} />
                             </div>
                         </div>
                         <div style={{"display": "flex", "flexDirection": "column", "marginLeft": 280, "paddingTop": 16, "paddingBottom": 17, "borderRadius": 100, "background": "rgb(75, 75, 149)"}}>
                             <div style={{"display": "flex", "flexShrink": "0", "paddingLeft": 12, "paddingRight": 12}}>
-                                <img src="https://pagedraw-images.s3.amazonaws.com/1613364633379240-1512436805496-967F98F7-28F0-4E8C-8C2B-875F2371A41F.png" style={{"width": 24, "height": 15, "flexShrink": "0", "borderWidth": 0}} /> 
+                                <img src="https://complex-houses.surge.sh/from-s3/1613364633379240-1512436805496-967F98F7-28F0-4E8C-8C2B-875F2371A41F.png" style={{"width": 24, "height": 15, "flexShrink": "0", "borderWidth": 0}} />
                             </div>
                         </div>
                         <div style={{"display": "flex", "flexDirection": "column", "marginLeft": 280, "paddingTop": 13, "paddingBottom": 14, "borderRadius": 100, "background": "rgb(75, 75, 149)"}}>
                             <div style={{"display": "flex", "flexShrink": "0", "paddingLeft": 19, "paddingRight": 17}}>
-                                <img src="https://pagedraw-images.s3.amazonaws.com/1416879665250966-1512436805499-FCB8D36C-AA3B-4696-9277-B297F8CDD40F.png" style={{"width": 12, "height": 21, "flexShrink": "0", "borderWidth": 0}} /> 
+                                <img src="https://complex-houses.surge.sh/from-s3/1416879665250966-1512436805499-FCB8D36C-AA3B-4696-9277-B297F8CDD40F.png" style={{"width": 12, "height": 21, "flexShrink": "0", "borderWidth": 0}} />
                             </div>
                         </div>
                     </div>

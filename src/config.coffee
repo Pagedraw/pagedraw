@@ -92,8 +92,8 @@ config =
     show_slices: false
     visualizeSnapToGrid: true
 
-    disableFigmaSketchImport: false
-    announceOpenSource: false
+    disableFigmaSketchImport: true
+    announceOpenSource: true
 
     extraJSPrefix: undefined
     extraCSSPrefix: undefined
