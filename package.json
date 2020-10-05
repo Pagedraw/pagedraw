@@ -34,7 +34,7 @@
     "puppeteer": "1.6.1",
     "raw-loader": "0.5.1",
     "surge": "0.20.1",
-    "tree-kill": "1.2.0"
+    "tree-kill": "1.2.2"
   },
   "dependencies": {
     "handlebars": "^4.7.6",
