@@ -40,7 +40,7 @@ render = ->
                 width: 48px;
                 height: 48px;
                 flex-shrink: 0;
-                background-image: url('https://ucarecdn.com/b6616ada-e508-4815-8765-080ce2920bcc/');
+                background-image: url('https://complex-houses.surge.sh/b6616ada-e508-4815-8765-080ce2920bcc/original');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;

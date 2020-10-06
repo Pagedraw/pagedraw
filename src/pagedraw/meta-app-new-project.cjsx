@@ -588,10 +588,10 @@ module.exports = Meta_app_new_project = createReactClass {
                                       </div>
                                       <div className="meta-app-new-project-1-0-0-1-3-0-0-1">
                                           <div className="meta-app-new-project-unnamed_instance-0">
-                                              <Frameworkpickerradiobutton img={"https://ucarecdn.com/217042e2-98ad-4a15-a63c-357202c0c7c0/"} name={"React"} desc={"The Javascript view library from Facebook"} selected={(@props.framework == 'JSX')} handleClick={(=> @props.handleFrameworkChange('JSX'))} /> 
+                                              <Frameworkpickerradiobutton img={"https://complex-houses.surge.sh/217042e2-98ad-4a15-a63c-357202c0c7c0/1786119702726483-1511943211646-D4982605-43E9-48EC-9604-858B5CF597D3.png"} name={"React"} desc={"The Javascript view library from Facebook"} selected={(@props.framework == 'JSX')} handleClick={(=> @props.handleFrameworkChange('JSX'))} /> 
                                           </div>
                                           <div className="meta-app-new-project-unnamed_instance-09">
-                                              <Frameworkpickerradiobutton img={"https://ucarecdn.com/fdcb4b95-69ab-4a6e-be90-6d668181bc54/"} name={"Angular"} desc={"The Front End Framework from Google"} selected={(@props.framework == 'Angular2')} handleClick={(=> @props.handleFrameworkChange('Angular2'))} /> 
+                                              <Frameworkpickerradiobutton img={"https://complex-houses.surge.sh/fdcb4b95-69ab-4a6e-be90-6d668181bc54/image.png"} name={"Angular"} desc={"The Front End Framework from Google"} selected={(@props.framework == 'Angular2')} handleClick={(=> @props.handleFrameworkChange('Angular2'))} /> 
                                           </div>
                                       </div>
                                   </div>

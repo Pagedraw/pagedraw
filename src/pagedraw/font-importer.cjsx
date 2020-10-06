@@ -267,7 +267,7 @@ render = ->
         { if ((if not _l.isEmpty(@props.error) then 'Error' else if @props.importing then 'Importing' else 'Initial') == "Importing")
             <div className="fontimporter-importing-3">
                 <div className="fontimporter-1-0-0">
-                    <img src="https://ucarecdn.com/59ec0968-b6e3-4a00-b082-932b7fcf41a5/" className="fontimporter-image-8" /> 
+                    <img src="https://complex-houses.surge.sh/59ec0968-b6e3-4a00-b082-932b7fcf41a5/loading.gif" className="fontimporter-image-8" /> 
                 </div>
             </div>
         }

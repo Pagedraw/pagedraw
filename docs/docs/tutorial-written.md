@@ -67,7 +67,7 @@ rectangle (`R` + drag) around the text block and inside the artboard. I gave the
 
 Now it's time to choose your favorite movie cover and copy the image into Pagedraw. You can import any PNG simply by copy pasting it into Pagedraw. You can start by copying the cover of one of our all time favorites below
 
-![Pulp Fiction](https://ucarecdn.com/5e0a6047-d3e0-46f4-bbe6-c095fb64996a/)
+![Pulp Fiction](https://complex-houses.surge.sh/5e0a6047-d3e0-46f4-bbe6-c095fb64996a/image.png)
 
 Position the image inside the white rectangle under the text. Note that in order for the image to be displayed "on top" of the white block, it must be smaller than the white block. That's how we figure out which block goes in front for now.
 

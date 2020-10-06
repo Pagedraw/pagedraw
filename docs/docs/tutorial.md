@@ -73,7 +73,7 @@ class App extends Component {
         super()
         this.state = {
             title: 'Pulp Fiction',
-            img_src: "https://ucarecdn.com/5e0a6047-d3e0-46f4-bbe6-c095fb64996a/"
+            img_src: "https://complex-houses.surge.sh/5e0a6047-d3e0-46f4-bbe6-c095fb64996a/image.png"
         };
     }
 
@@ -85,7 +85,7 @@ class App extends Component {
     changeMovie() {
         this.setState({
             title: 'Back to the Future',
-            img_src: "https://ucarecdn.com/29b73fb5-8421-46bd-adf0-740793a622a7/"
+            img_src: "https://complex-houses.surge.sh/29b73fb5-8421-46bd-adf0-740793a622a7/image.png"
         });
     }
 }
@@ -151,7 +151,7 @@ class App extends Component {
         super()
         this.state = {
             title: 'Pulp Fiction',
-            img_src: "https://ucarecdn.com/5e0a6047-d3e0-46f4-bbe6-c095fb64996a/",
+            img_src: "https://complex-houses.surge.sh/5e0a6047-d3e0-46f4-bbe6-c095fb64996a/image.png",
             rating: 0,
             reviews: [
                 {content: 'This is a test review'},
@@ -184,7 +184,7 @@ class App extends Component {
     changeMovie() {
         this.setState({
             title: 'Back to the Future',
-            img_src: "https://ucarecdn.com/29b73fb5-8421-46bd-adf0-740793a622a7/"
+            img_src: "https://complex-houses.surge.sh/29b73fb5-8421-46bd-adf0-740793a622a7/image.png"
         });
     }
 

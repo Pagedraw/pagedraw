@@ -261,7 +261,7 @@ render = ->
             <div className="sketchimporter-importing-7">
                 <div className="sketchimporter-1-0-0">
                     <div className="sketchimporter-1-0-0-0" /> 
-                    <img src="https://ucarecdn.com/59ec0968-b6e3-4a00-b082-932b7fcf41a5/" className="sketchimporter-image-7" /> 
+                    <img src="https://complex-houses.surge.sh/59ec0968-b6e3-4a00-b082-932b7fcf41a5/loading.gif" className="sketchimporter-image-7" /> 
                     <div className="sketchimporter-1-0-0-2" /> 
                 </div>
                 <div className="sketchimporter-1-0-1">

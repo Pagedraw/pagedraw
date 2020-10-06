@@ -58,7 +58,7 @@ render = ->
                     <a href="/" style={{"display": "flex"}}>
                         <div style={{"display": "flex", "flexDirection": "column", "flexGrow": "1"}}>
                             <div style={{"display": "flex", "flexShrink": "0", "paddingRight": 29}}>
-                                <img src="https://ucarecdn.com/f8b3ff29-bde2-4e98-b67e-bfa1f4cfbe04/" style={{"width": 30, "height": 25, "flexShrink": "0", "borderWidth": 0}} />
+                                <img src="https://complex-houses.surge.sh/f8b3ff29-bde2-4e98-b67e-bfa1f4cfbe04/image.png" style={{"width": 30, "height": 25, "flexShrink": "0", "borderWidth": 0}} />
                                 <div style={{"width": 75, "flexShrink": "0", "marginLeft": 6, "fontFamily": "\"Lato\", sans-serif", "color": (if this.props.white then 'rgba(255, 255, 255, 0.8)' else '#06122C'), "fontSize": 17, "lineHeight": "25.5px", "letterSpacing": 0, "fontWeight": "normal", "fontStyle": "normal", "textDecoration": "none", "textAlign": "left", "wordWrap": "break-word"}}>
                                     Pagedraw
                                 </div>

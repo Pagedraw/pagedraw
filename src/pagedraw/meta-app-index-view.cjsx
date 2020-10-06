@@ -663,7 +663,7 @@ module.exports = Main = createReactClass {
                   width: 61px;
                   height: 61px;
                   flex-shrink: 0;
-                  background-image: url('https://ucarecdn.com/5a26092e-6389-43d1-8086-3c44f8c44484/');
+                  background-image: url('https://complex-houses.surge.sh/5a26092e-6389-43d1-8086-3c44f8c44484/sketch-symbol-transparent@2x.png');
                   background-size: cover;
                   background-position: center;
               }
@@ -1034,7 +1034,7 @@ module.exports = Main = createReactClass {
                                                       <div className="main-0-0-1-0-0-1-0-0-4-2-0-0">
                                                           <div className="main-0-0-1-0-0-1-0-0-4-2-0-0-0">
                                                               <div className="main-0-0-1-0-0-1-0-0-4-2-0-0-0-0">
-                                                                  <img src="https://ucarecdn.com/8fb8956e-20d0-4114-b516-a2d8c5e4dd7e/" className="main-image_3-8" /> 
+                                                                  <img src="https://complex-houses.surge.sh/8fb8956e-20d0-4114-b516-a2d8c5e4dd7e/original" className="main-image_3-8" /> 
                                                               </div>
                                                           </div>
                                                           <div className="main-0-0-1-0-0-1-0-0-4-2-0-0-1">

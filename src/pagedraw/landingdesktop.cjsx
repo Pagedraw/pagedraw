@@ -89,7 +89,7 @@ render = ->
                         <div style={{"display": "flex", "flexShrink": "0", "marginTop": 21}}>
                             <div style={{"display": "flex", "flexDirection": "column", "paddingBottom": 3}}>
                                 <div style={{"display": "flex", "flexShrink": "0"}}>
-                                    <img src="https://ucarecdn.com/cfba35fa-6c23-4bad-8554-df007a1e4f14/" style={{"width": 522, "height": 359, "flexShrink": "0", "borderWidth": 0}} />
+                                    <img src="https://complex-houses.surge.sh/cfba35fa-6c23-4bad-8554-df007a1e4f14/image.png" style={{"width": 522, "height": 359, "flexShrink": "0", "borderWidth": 0}} />
                                 </div>
                             </div>
                             <div style={{"display": "flex", "flexDirection": "column", "marginLeft": 72, "paddingTop": 2}}>
@@ -156,12 +156,12 @@ render = ->
                                         </div>
                                     </div>
                                     <a href="https://www.figma.com/" target="_blank" style={{"flexShrink": "0", "marginLeft": 33, "display": "flex"}}>
-                                        <img src="https://ucarecdn.com/cdec4e4d-0f1b-4a53-99e4-20b2848ad39b/" style={{"width": 70, "height": 70, "borderWidth": 0, "flexGrow": "1"}} />
+                                        <img src="https://complex-houses.surge.sh/cdec4e4d-0f1b-4a53-99e4-20b2848ad39b/image.png" style={{"width": 70, "height": 70, "borderWidth": 0, "flexGrow": "1"}} />
                                     </a>
                                     <div style={{"display": "flex", "flexDirection": "column", "marginLeft": 36, "paddingTop": 5, "paddingBottom": 5}}>
                                         <div style={{"display": "flex", "flexShrink": "0"}}>
                                             <a href="https://www.sketchapp.com/" target="_blank" style={{"flexShrink": "0", "display": "flex"}}>
-                                                <img src="https://ucarecdn.com/32701dc9-f7cf-4828-9f0a-b166cb8e38c8/" style={{"width": 70, "height": 60, "borderWidth": 0, "flexGrow": "1"}} />
+                                                <img src="https://complex-houses.surge.sh/32701dc9-f7cf-4828-9f0a-b166cb8e38c8/image.png" style={{"width": 70, "height": 60, "borderWidth": 0, "flexGrow": "1"}} />
                                             </a>
                                         </div>
                                     </div>
@@ -202,7 +202,7 @@ render = ->
                                     <div style={{"display": "flex", "flexDirection": "column", "paddingTop": 1, "paddingBottom": 3}}>
                                         <div style={{"display": "flex", "flexShrink": "0"}}>
                                             <a href="http://graphql.org/" target="_blank" style={{"flexShrink": "0", "display": "flex"}}>
-                                                <img src="https://ucarecdn.com/0a12e233-3a96-4b5b-8566-816c0448d035/" style={{"width": 101, "height": 35, "borderWidth": 0, "flexGrow": "1"}} />
+                                                <img src="https://complex-houses.surge.sh/0a12e233-3a96-4b5b-8566-816c0448d035/image.png" style={{"width": 101, "height": 35, "borderWidth": 0, "flexGrow": "1"}} />
                                             </a>
                                         </div>
                                     </div>
@@ -235,10 +235,10 @@ render = ->
                                 </div>
                             </div>
                             <a href="https://vuejs.org/" target="_blank" style={{"flexShrink": "0", "marginLeft": 48, "display": "flex"}}>
-                                <img src="https://ucarecdn.com/5a8da673-8daf-478f-9a30-7cf507808db9/" style={{"width": 60, "height": 60, "borderWidth": 0, "flexGrow": "1"}} />
+                                <img src="https://complex-houses.surge.sh/5a8da673-8daf-478f-9a30-7cf507808db9/image.png" style={{"width": 60, "height": 60, "borderWidth": 0, "flexGrow": "1"}} />
                             </a>
                             <a href="https://angular.io/" target="_blank" style={{"flexShrink": "0", "marginLeft": 48, "display": "flex"}}>
-                                <img src="https://ucarecdn.com/55e6c57d-d7f1-4834-8e1c-160bf9b5dc05/" style={{"width": 60, "height": 60, "borderWidth": 0, "flexGrow": "1"}} />
+                                <img src="https://complex-houses.surge.sh/55e6c57d-d7f1-4834-8e1c-160bf9b5dc05/image.png" style={{"width": 60, "height": 60, "borderWidth": 0, "flexGrow": "1"}} />
                             </a>
                         </div>
                         <div style={{"display": "flex", "flexShrink": "0", "marginTop": 17, "paddingLeft": 78, "paddingRight": 78}}>
@@ -275,7 +275,7 @@ render = ->
                                     <div style={{"display": "flex", "flexDirection": "column", "paddingTop": 1, "paddingBottom": 4}}>
                                         <div style={{"display": "flex", "flexShrink": "0"}}>
                                             <a href="https://getrileynow.com" target="_blank" style={{"flexShrink": "0", "display": "flex"}}>
-                                                <img src="https://ucarecdn.com/1e305a79-4529-46dc-ba03-3e67b74fb3f4/" style={{"width": 97, "height": 33, "borderWidth": 0, "flexGrow": "1"}} />
+                                                <img src="https://complex-houses.surge.sh/1e305a79-4529-46dc-ba03-3e67b74fb3f4/image.png" style={{"width": 97, "height": 33, "borderWidth": 0, "flexGrow": "1"}} />
                                             </a>
                                         </div>
                                     </div>
@@ -333,7 +333,7 @@ render = ->
                             <div style={{"display": "flex", "flexDirection": "column", "paddingTop": 6, "paddingBottom": 3}}>
                                 <div style={{"display": "flex", "flexShrink": "0"}}>
                                     <a href="https://expo.io/" style={{"flexShrink": "0", "display": "flex"}}>
-                                        <img src="https://ucarecdn.com/0e28dfd2-9ea1-4a04-bf11-2cd82be3d36c/" style={{"width": 105, "height": 30, "borderWidth": 0, "flexGrow": "1"}} />
+                                        <img src="https://complex-houses.surge.sh/0e28dfd2-9ea1-4a04-bf11-2cd82be3d36c/image.png" style={{"width": 105, "height": 30, "borderWidth": 0, "flexGrow": "1"}} />
                                     </a>
                                 </div>
                             </div>
@@ -365,7 +365,7 @@ render = ->
         <div style={{"display": "flex", "flexShrink": "0", "marginTop": 87}}>
             <div style={{"display": "flex", "flexDirection": "column", "flexGrow": "1", "flexBasis": 0, "minHeight": "fit-content", "paddingTop": 1, "background": "rgb(38, 38, 38)"}}>
                 <div style={{"display": "flex", "flexShrink": "0", "paddingLeft": 8}}>
-                    <div style={{"height": 702, "flexGrow": "0.3058659217877095", "flexBasis": 0, "backgroundImage": "url('https://ucarecdn.com/900b6875-8bfb-4d24-9562-c0050bb955eb/')", "backgroundSize": "cover", "backgroundPosition": "center"}} />
+                    <div style={{"height": 702, "flexGrow": "0.3058659217877095", "flexBasis": 0, "backgroundImage": "url('https://complex-houses.surge.sh/900b6875-8bfb-4d24-9562-c0050bb955eb/Group 2.png')", "backgroundSize": "cover", "backgroundPosition": "center"}} />
                     <div style={{"height": 0, "flexGrow": "0.052374301675977654", "flexBasis": 0}} />
                     <div style={{"display": "flex", "flexDirection": "column", "flexGrow": "0.5349162011173184", "flexBasis": 0, "minHeight": "fit-content", "paddingTop": 101, "paddingBottom": 102}}>
                         <div style={{"display": "flex", "flexShrink": "0"}}>
@@ -466,7 +466,7 @@ render = ->
                             </div>
                             <div style={{"display": "flex", "flexDirection": "column", "marginLeft": 23, "paddingTop": 40, "paddingBottom": 25}}>
                                 <div style={{"display": "flex", "flexShrink": "0"}}>
-                                    <img src="https://ucarecdn.com/97fe0dae-3938-4035-b1a3-a97d6baeff37/" style={{"width": 473.00000000000006, "height": 287, "flexShrink": "0", "borderWidth": 0}} />
+                                    <img src="https://complex-houses.surge.sh/97fe0dae-3938-4035-b1a3-a97d6baeff37/s_5B566C59963EF0E6430347385AC161195C7AC94DE0468CC5064070C3B2863040_1524249620215_stress-test.gif" style={{"width": 473.00000000000006, "height": 287, "flexShrink": "0", "borderWidth": 0}} />
                                 </div>
                             </div>
                         </div>
@@ -625,7 +625,7 @@ render = ->
                     <a href="/fiddle/fb-newsfeed" target="_blank" style={{"display": "flex"}}>
                         <div style={{"display": "flex", "flexDirection": "column", "borderRadius": 6, "boxShadow": "0px 5px 15px 0px rgba(0,0,0,0.07), 0px 15px 35px 0px rgba(50,50,93,0.10)", "background": "rgb(255, 255, 255)", "flexGrow": "1"}}>
                             <div style={{"display": "flex", "flexShrink": "0"}}>
-                                <img src="https://ucarecdn.com/ed20d640-50fb-4c1e-9404-ecd1d8d71fa2/" style={{"width": 47, "height": 48, "flexShrink": "0", "borderWidth": 0}} />
+                                <img src="https://complex-houses.surge.sh/ed20d640-50fb-4c1e-9404-ecd1d8d71fa2/FB-fLogo-Blue-broadcast-2.png" style={{"width": 47, "height": 48, "flexShrink": "0", "borderWidth": 0}} />
                                 <div style={{"display": "flex", "flexDirection": "column", "marginLeft": 30, "paddingTop": 13, "paddingBottom": 14}}>
                                     <div style={{"display": "flex", "flexShrink": "0"}}>
                                         <div style={{"width": 263, "flexShrink": "0", "fontFamily": "\"Lato\", sans-serif", "color": "rgb(0, 0, 31)", "fontSize": 17, "lineHeight": "normal", "letterSpacing": 0, "fontWeight": "normal", "fontStyle": "normal", "textDecoration": "none", "textAlign": "left", "wordWrap": "break-word"}}>
@@ -643,7 +643,7 @@ render = ->
                             <div style={{"display": "flex", "flexShrink": "0", "paddingLeft": 5}}>
                                 <div style={{"display": "flex", "flexDirection": "column", "paddingTop": 9, "paddingBottom": 9}}>
                                     <div style={{"display": "flex", "flexShrink": "0"}}>
-                                        <img src="https://ucarecdn.com/f8b3ff29-bde2-4e98-b67e-bfa1f4cfbe04/" style={{"width": 36, "height": 30, "flexShrink": "0", "borderWidth": 0}} />
+                                        <img src="https://complex-houses.surge.sh/f8b3ff29-bde2-4e98-b67e-bfa1f4cfbe04/image.png" style={{"width": 36, "height": 30, "flexShrink": "0", "borderWidth": 0}} />
                                     </div>
                                 </div>
                                 <div style={{"width": 1, "height": 48, "flexShrink": "0", "marginLeft": 6, "background": "rgb(229, 229, 229)"}} />

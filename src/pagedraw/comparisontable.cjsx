@@ -104,7 +104,7 @@ module.exports = Comparisontable = createReactClass {
                                                   { if (elem.col2)
                                                       <div style={{"display": "flex", "flexDirection": "column", "paddingTop": 6, "paddingBottom": 9, "background": "rgba(216, 216, 216, 0)", "flexGrow": "1"}}>
                                                           <div style={{"display": "flex", "flexShrink": "0", "paddingLeft": 19, "paddingRight": 16}}>
-                                                              <img src="https://ucarecdn.com/df004460-3710-490f-86fa-30ac52ef8a09/" style={{"width": 18, "height": 18, "flexShrink": "0", "borderWidth": 0}} /> 
+                                                              <img src="https://complex-houses.surge.sh/df004460-3710-490f-86fa-30ac52ef8a09/image.png" style={{"width": 18, "height": 18, "flexShrink": "0", "borderWidth": 0}} /> 
                                                           </div>
                                                       </div>
                                                   }
@@ -118,7 +118,7 @@ module.exports = Comparisontable = createReactClass {
                                                   { if (elem.col3)
                                                       <div style={{"display": "flex", "flexDirection": "column", "paddingTop": 6, "paddingBottom": 9, "background": "rgba(216, 216, 216, 0)", "flexGrow": "1"}}>
                                                           <div style={{"display": "flex", "flexShrink": "0", "paddingLeft": 19, "paddingRight": 16}}>
-                                                              <img src="https://ucarecdn.com/df004460-3710-490f-86fa-30ac52ef8a09/" style={{"width": 18, "height": 18, "flexShrink": "0", "borderWidth": 0}} /> 
+                                                              <img src="https://complex-houses.surge.sh/df004460-3710-490f-86fa-30ac52ef8a09/image.png" style={{"width": 18, "height": 18, "flexShrink": "0", "borderWidth": 0}} /> 
                                                           </div>
                                                       </div>
                                                   }

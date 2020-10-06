@@ -23,7 +23,7 @@ module.exports = LibraryTheme = createReactClass
                 <div style={backgroundColor: '#2B2B58', height: '80px', width: '100%'}>
                     <div style={display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '80%', margin: '0 auto', height: '80px'}>
                         <div className="bootstrap" style={height: '100%', width: '70%', flex: '4 2 1', display: 'flex'}>
-                            <img src={'https://ucarecdn.com/f8b3ff29-bde2-4e98-b67e-bfa1f4cfbe04/'} style={maxWidth: '100%', maxHeight: '100%', flex: '1 1 1'} />
+                            <img src={'https://complex-houses.surge.sh/f8b3ff29-bde2-4e98-b67e-bfa1f4cfbe04/image.png'} style={maxWidth: '100%', maxHeight: '100%', flex: '1 1 1'} />
                             <div style={marginBottom: 10, alignSelf: 'flex-end', flexGrow: 2}>
                                 <LibraryAutoSuggest focusOnMount={false} textColor={'white'} onChange={=> @forceUpdate(=>)} />
                             </div>
@@ -66,6 +66,6 @@ module.exports = LibraryTheme = createReactClass
             </div>
 
             <div style={backgroundColor: '#2B2B58', height: '80px', width: '100%'}>
-                <img src={'https://ucarecdn.com/f8b3ff29-bde2-4e98-b67e-bfa1f4cfbe04/'} style={maxWidth: '100%', maxHeight: '100%', float: 'right'} />
+                <img src={'https://complex-houses.surge.sh/f8b3ff29-bde2-4e98-b67e-bfa1f4cfbe04/image.png'} style={maxWidth: '100%', maxHeight: '100%', float: 'right'} />
             </div>
         </div>

@@ -236,7 +236,7 @@ exports.FigmaModal = createReactClass
                                             placeholder="https://figma.com/file/XXXXXXXXXXXXXXXXXXXXXX/Sample-File-Name" />
                                     </div>
                                 else if @status == "loading"
-                                    <img style={display: 'block', marginLeft: 'auto', marginRight: 'auto'} src="https://ucarecdn.com/59ec0968-b6e3-4a00-b082-932b7fcf41a5/" />
+                                    <img style={display: 'block', marginLeft: 'auto', marginRight: 'auto'} src="https://complex-houses.surge.sh/59ec0968-b6e3-4a00-b082-932b7fcf41a5/loading.gif" />
                                 else
                                     <p style={color: 'red'}>We weren't able to recognize your upload as a Figma file.
 

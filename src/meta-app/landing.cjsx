@@ -12,7 +12,7 @@ LandingDesktop = createReactClass
             Iframes not supported
         </iframe>
 
-        editorPicture = <img style={width: 1000} src="https://ucarecdn.com/bb07033e-3a89-4509-be20-7f901988d6e0/" />
+        editorPicture = <img style={width: 1000} src="https://complex-houses.surge.sh/bb07033e-3a89-4509-be20-7f901988d6e0/image.png" />
 
         importPagedrawn =
             <div style={fontFamily: 'monaco, monospace', lineHeight: '40px', color: '#fff', fontSize: 22, whiteSpace: 'pre'}>

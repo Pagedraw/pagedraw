@@ -283,7 +283,7 @@ exports.Editor = Editor = createReactClass
 
     ## Topbar utilities
     topbarBlockAdder: ->
-        trigger = <div><TopbarButton text="Add" image="https://ucarecdn.com/10ab7bf3-7f34-4d0f-a1b4-3187747c3862/" /></div>
+        trigger = <div><TopbarButton text="Add" image="https://complex-houses.surge.sh/10ab7bf3-7f34-4d0f-a1b4-3187747c3862/baseline-add-24px.svg" /></div>
 
         popover = (closePopover) =>
             entry_for_type = (blockType) => {
@@ -365,7 +365,7 @@ exports.Editor = Editor = createReactClass
                         <Modal.Title>Updating from Figma</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <img style={display: 'block', marginLeft: 'auto', marginRight: 'auto'} src="https://ucarecdn.com/59ec0968-b6e3-4a00-b082-932b7fcf41a5/" />
+                        <img style={display: 'block', marginLeft: 'auto', marginRight: 'auto'} src="https://complex-houses.surge.sh/59ec0968-b6e3-4a00-b082-932b7fcf41a5/loading.gif" />
                     </Modal.Body>
                 ])
         else

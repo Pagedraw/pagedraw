@@ -147,7 +147,7 @@ render = ->
                 width: 18px;
                 height: 18px;
                 flex-shrink: 0;
-                background-image: url('https://ucarecdn.com/cb96c502-cfc4-42c5-b16a-fdaff005e38b/');
+                background-image: url('https://complex-houses.surge.sh/cb96c502-cfc4-42c5-b16a-fdaff005e38b/original');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -192,7 +192,7 @@ render = ->
                 width: 18px;
                 height: 18px;
                 flex-shrink: 0;
-                background-image: url('https://ucarecdn.com/897c35eb-bf13-400d-b293-7acb6f8899af/');
+                background-image: url('https://complex-houses.surge.sh/897c35eb-bf13-400d-b293-7acb6f8899af/original');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;

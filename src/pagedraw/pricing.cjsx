@@ -405,7 +405,7 @@ render = ->
                                         <div style={{"display": "flex", "flexDirection": "column", "paddingTop": 12}}>
                                             <div style={{"display": "flex", "flexShrink": "0"}}>
                                                 <a href="https://getrileynow.com" target="_blank" style={{"flexShrink": "0", "display": "flex"}}>
-                                                    <img src="https://ucarecdn.com/1e305a79-4529-46dc-ba03-3e67b74fb3f4/" style={{"width": 97, "height": 33, "borderWidth": 0, "flexGrow": "1"}} /> 
+                                                    <img src="https://complex-houses.surge.sh/1e305a79-4529-46dc-ba03-3e67b74fb3f4/image.png" style={{"width": 97, "height": 33, "borderWidth": 0, "flexGrow": "1"}} /> 
                                                 </a>
                                             </div>
                                         </div>

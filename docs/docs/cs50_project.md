@@ -101,7 +101,7 @@ and the `Font` to `Candara`.
 
 Now let's add our first image! To add an image, do the same thing you did when you added a text block, but this time choose `Image Block` as the type.
 Now copy the URL
-```https://ucarecdn.com/0826ede0-dbd1-419a-8bd4-2800afc04c2c/```
+```https://complex-houses.surge.sh/0826ede0-dbd1-419a-8bd4-2800afc04c2c/smiley-face-png-96527038_o.png```
 into the `Image Source URL` field. Another option is to upload any image file using `Pick Image`. This is gonna add a
 smiley face to your page.
 

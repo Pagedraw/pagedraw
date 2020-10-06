@@ -127,7 +127,7 @@ render = ->
             <div className="deletebutton-0-0">
                 <div className="deletebutton-oval_2">
                     <div className="deletebutton-0-0-0-0">
-                        <img src="https://ucarecdn.com/f2991d60-0b5c-4d07-bf8c-97c6a6d33c64/" className="deletebutton-image_6" /> 
+                        <img src="https://complex-houses.surge.sh/f2991d60-0b5c-4d07-bf8c-97c6a6d33c64/original" className="deletebutton-image_6" /> 
                     </div>
                 </div>
             </div>
@@ -137,7 +137,7 @@ render = ->
                 <div className="deletebutton-1-0-0">
                     <div className="deletebutton-oval_2-3">
                         <div className="deletebutton-1-0-0-0-0">
-                            <img src="https://ucarecdn.com/f2991d60-0b5c-4d07-bf8c-97c6a6d33c64/" className="deletebutton-image_6-3" /> 
+                            <img src="https://complex-houses.surge.sh/f2991d60-0b5c-4d07-bf8c-97c6a6d33c64/original" className="deletebutton-image_6-3" /> 
                         </div>
                     </div>
                 </div>

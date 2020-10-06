@@ -155,7 +155,7 @@ module.exports = Footer = createReactClass {
                       <div className="footer-text_22">{"©2018 Pagedraw"}</div>
                   </div>
               </div>
-              <img src="https://ucarecdn.com/dcc8b8a1-72a3-4eeb-b397-cf0306fcf8fd/" className="footer-image_4" /> 
+              <img src="https://complex-houses.surge.sh/dcc8b8a1-72a3-4eeb-b397-cf0306fcf8fd/sit.png" className="footer-image_4" /> 
           </div>
       </div>
 }

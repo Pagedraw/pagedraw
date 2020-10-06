@@ -180,7 +180,7 @@ module.exports = Logo = createReactClass {
                       <div className="logo-0-0-0-0">
                           <div className="logo-0-0-0-0-0">
                               <div className="logo-0-0-0-0-0-0">
-                                  <img src="https://ucarecdn.com/5fc60725-367b-43a7-a9cb-edd667094fb7/" className="logo-image-6" /> 
+                                  <img src="https://complex-houses.surge.sh/5fc60725-367b-43a7-a9cb-edd667094fb7/image.png" className="logo-image-6" /> 
                               </div>
                           </div>
                           <div className="logo-text_2">Pagedraw</div>
@@ -195,7 +195,7 @@ module.exports = Logo = createReactClass {
                           <div className="logo-1-0-0-0-0">
                               <div className="logo-1-0-0-0-0-0">
                                   <div className="logo-1-0-0-0-0-0-0">
-                                      <img src="https://ucarecdn.com/5fc60725-367b-43a7-a9cb-edd667094fb7/" className="logo-image_2" /> 
+                                      <img src="https://complex-houses.surge.sh/5fc60725-367b-43a7-a9cb-edd667094fb7/image.png" className="logo-image_2" /> 
                                   </div>
                               </div>
                               <div className="logo-text_1">Pagedraw</div>

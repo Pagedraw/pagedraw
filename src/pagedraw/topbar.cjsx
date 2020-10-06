@@ -925,21 +925,21 @@ module.exports = Topbar = createReactClass {
                   <div className="topbar-0-0-0">
                       <div className="topbar-0-0-0-0" /> 
                       <div className="topbar-topbarbutton-3">
-                          <Topbarbutton state={"A"} text={"Infer constraints"} onClick={(@props.editor.inferConstraints)} image={"https://ucarecdn.com/c393cf1c-56f7-4885-9c84-b0f892be754e/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Infer constraints"} onClick={(@props.editor.inferConstraints)} image={"https://complex-houses.surge.sh/c393cf1c-56f7-4885-9c84-b0f892be754e/wildcard4.png"} disabled={false} /> 
                       </div>
                       <div className="topbar-0-0-0-2" /> 
                       <div className="topbar-topbarbutton-1">
-                          <Topbarbutton state={"A"} text={"Random Size"} onClick={(@props.editor.randomizeSize)} image={"https://ucarecdn.com/1d46e25f-2b59-47c9-8f1d-9b6de444386a/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Random Size"} onClick={(@props.editor.randomizeSize)} image={"https://complex-houses.surge.sh/1d46e25f-2b59-47c9-8f1d-9b6de444386a/simple-gear.png"} disabled={false} /> 
                       </div>
                       <div className="topbar-topbarbutton-7">
-                          <Topbarbutton state={"A"} text={"Random Data"} onClick={(@props.editor.randomizeData)} image={"https://ucarecdn.com/5be2f265-ef52-4864-ba86-077238bc2890/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Random Data"} onClick={(@props.editor.randomizeData)} image={"https://complex-houses.surge.sh/5be2f265-ef52-4864-ba86-077238bc2890/wildcard6.png"} disabled={false} /> 
                       </div>
                       <div className="topbar-0-0-0-5" /> 
                       <div className="topbar-topbarbutton-77">
-                          <Topbarbutton state={"A"} text={"Zoom In"} onClick={(@props.editor.viewportManager.handleZoomIn)} image={"https://ucarecdn.com/9a3fa941-ba37-4bcf-b071-6e4ff0e5a66d/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Zoom In"} onClick={(@props.editor.viewportManager.handleZoomIn)} image={"https://complex-houses.surge.sh/9a3fa941-ba37-4bcf-b071-6e4ff0e5a66d/zoom-plus.png"} disabled={false} /> 
                       </div>
                       <div className="topbar-topbarbutton-4">
-                          <Topbarbutton state={"A"} text={"Zoom Out"} onClick={(@props.editor.viewportManager.handleZoomOut)} image={"https://ucarecdn.com/4b48a72f-40e4-4110-a90f-15319b22814f/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Zoom Out"} onClick={(@props.editor.viewportManager.handleZoomOut)} image={"https://complex-houses.surge.sh/4b48a72f-40e4-4110-a90f-15319b22814f/zoom-minus.png"} disabled={false} /> 
                       </div>
                       <div className="topbar-0-0-0-8" /> 
                       <div className="topbar-0-0-0-9">
@@ -972,10 +972,10 @@ module.exports = Topbar = createReactClass {
                       </div>
                       <div className="topbar-1-0-0-1" /> 
                       <div className="topbar-topbarbutton_instance_3">
-                          <Topbarbutton state={"A"} text={"Zoom In"} onClick={(@props.editor.viewportManager.handleZoomIn)} image={"https://ucarecdn.com/9a3fa941-ba37-4bcf-b071-6e4ff0e5a66d/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Zoom In"} onClick={(@props.editor.viewportManager.handleZoomIn)} image={"https://complex-houses.surge.sh/9a3fa941-ba37-4bcf-b071-6e4ff0e5a66d/zoom-plus.png"} disabled={false} /> 
                       </div>
                       <div className="topbar-topbarbutton_instance-9">
-                          <Topbarbutton state={"A"} text={"Zoom Out"} onClick={(@props.editor.viewportManager.handleZoomOut)} image={"https://ucarecdn.com/4b48a72f-40e4-4110-a90f-15319b22814f/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Zoom Out"} onClick={(@props.editor.viewportManager.handleZoomOut)} image={"https://complex-houses.surge.sh/4b48a72f-40e4-4110-a90f-15319b22814f/zoom-minus.png"} disabled={false} /> 
                       </div>
                   </div>
                   <div className="topbar-1-0-1">
@@ -991,10 +991,10 @@ module.exports = Topbar = createReactClass {
                       </div>
                       <div className="topbar-2-0-0-1" /> 
                       <div className="topbar-topbarbutton_instance_2">
-                          <Topbarbutton state={"A"} text={"Shortcuts"} onClick={(@props.editor.handleShortcuts)} image={"https://ucarecdn.com/646bf1f4-d2b8-4697-ba79-6a40b45dd223/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Shortcuts"} onClick={(@props.editor.handleShortcuts)} image={"https://complex-houses.surge.sh/646bf1f4-d2b8-4697-ba79-6a40b45dd223/icons2 copy 4.png"} disabled={false} /> 
                       </div>
                       <div className="topbar-topbarbutton_instance_4">
-                          <Topbarbutton state={"A"} text={"Make Reusable"} onClick={(@props.editor.handleNewComponent)} image={"https://ucarecdn.com/1d46e25f-2b59-47c9-8f1d-9b6de444386a/"} disabled={(@props.editor.getSelectedBlocks().length == 0)} /> 
+                          <Topbarbutton state={"A"} text={"Make Reusable"} onClick={(@props.editor.handleNewComponent)} image={"https://complex-houses.surge.sh/1d46e25f-2b59-47c9-8f1d-9b6de444386a/simple-gear.png"} disabled={(@props.editor.getSelectedBlocks().length == 0)} /> 
                       </div>
                       <div className="topbar-2-0-0-4" /> 
                       <div className="topbar-rectangle_9">
@@ -1019,10 +1019,10 @@ module.exports = Topbar = createReactClass {
                       </div>
                       <div className="topbar-2-0-0-6" /> 
                       <div className="topbar-topbarbutton_instance_3-3">
-                          <Topbarbutton state={"A"} text={"Zoom In"} onClick={(@props.editor.viewportManager.handleZoomIn)} image={"https://ucarecdn.com/9a3fa941-ba37-4bcf-b071-6e4ff0e5a66d/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Zoom In"} onClick={(@props.editor.viewportManager.handleZoomIn)} image={"https://complex-houses.surge.sh/9a3fa941-ba37-4bcf-b071-6e4ff0e5a66d/zoom-plus.png"} disabled={false} /> 
                       </div>
                       <div className="topbar-topbarbutton_instance-0">
-                          <Topbarbutton state={"A"} text={"Zoom Out"} onClick={(@props.editor.viewportManager.handleZoomOut)} image={"https://ucarecdn.com/4b48a72f-40e4-4110-a90f-15319b22814f/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Zoom Out"} onClick={(@props.editor.viewportManager.handleZoomOut)} image={"https://complex-houses.surge.sh/4b48a72f-40e4-4110-a90f-15319b22814f/zoom-minus.png"} disabled={false} /> 
                       </div>
                       <div className="topbar-2-0-0-9">
                           <div className="topbar-2-0-0-9-0">
@@ -1045,25 +1045,25 @@ module.exports = Topbar = createReactClass {
                       </div>
                       <div className="topbar-3-0-0-1" /> 
                       <div className="topbar-topbarbutton_instance_13-8">
-                          <Topbarbutton state={"A"} text={"Shortcuts"} onClick={(@props.editor.handleShortcuts)} image={"https://ucarecdn.com/646bf1f4-d2b8-4697-ba79-6a40b45dd223/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Shortcuts"} onClick={(@props.editor.handleShortcuts)} image={"https://complex-houses.surge.sh/646bf1f4-d2b8-4697-ba79-6a40b45dd223/icons2 copy 4.png"} disabled={false} /> 
                       </div>
                       <div className="topbar-3-0-0-3" /> 
                       <div className="topbar-topbarbutton_instance_15">
-                          <Topbarbutton state={"A"} text={"Make Reusable"} onClick={(@props.editor.handleNewComponent)} image={"https://ucarecdn.com/1d46e25f-2b59-47c9-8f1d-9b6de444386a/"} disabled={(@props.editor.getSelectedBlocks().length == 0)} /> 
+                          <Topbarbutton state={"A"} text={"Make Reusable"} onClick={(@props.editor.handleNewComponent)} image={"https://complex-houses.surge.sh/1d46e25f-2b59-47c9-8f1d-9b6de444386a/simple-gear.png"} disabled={(@props.editor.getSelectedBlocks().length == 0)} /> 
                       </div>
                       <div className="topbar-topbarbutton_instance_16">
-                          <Topbarbutton state={"A"} text={"Sync Code"} onClick={(@props.editor.handleExport)} image={"https://ucarecdn.com/54591ad3-7fea-4d20-aa86-f238ca03aeac/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Sync Code"} onClick={(@props.editor.handleExport)} image={"https://complex-houses.surge.sh/54591ad3-7fea-4d20-aa86-f238ca03aeac/icons2 copy.png"} disabled={false} /> 
                       </div>
                       <div className="topbar-3-0-0-6" /> 
                       <div className="topbar-topbarbutton_instance_11">
-                          <Topbarbutton state={"A"} text={"Preview"} onClick={(@props.editor.handlePlay)} image={"https://ucarecdn.com/96f40588-00f2-453a-89b8-6df4287ab39a/"} disabled={(not @props.editor.topbarPlayButtonIsEnabled())} /> 
+                          <Topbarbutton state={"A"} text={"Preview"} onClick={(@props.editor.handlePlay)} image={"https://complex-houses.surge.sh/96f40588-00f2-453a-89b8-6df4287ab39a/play-button.svg"} disabled={(not @props.editor.topbarPlayButtonIsEnabled())} /> 
                       </div>
                       <div className="topbar-3-0-0-8" /> 
                       <div className="topbar-topbarbutton_instance_14">
-                          <Topbarbutton state={"A"} text={"Zoom In"} onClick={(@props.editor.viewportManager.handleZoomIn)} image={"https://ucarecdn.com/9a3fa941-ba37-4bcf-b071-6e4ff0e5a66d/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Zoom In"} onClick={(@props.editor.viewportManager.handleZoomIn)} image={"https://complex-houses.surge.sh/9a3fa941-ba37-4bcf-b071-6e4ff0e5a66d/zoom-plus.png"} disabled={false} /> 
                       </div>
                       <div className="topbar-topbarbutton_instance_12">
-                          <Topbarbutton state={"A"} text={"Zoom Out"} onClick={(@props.editor.viewportManager.handleZoomOut)} image={"https://ucarecdn.com/4b48a72f-40e4-4110-a90f-15319b22814f/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Zoom Out"} onClick={(@props.editor.viewportManager.handleZoomOut)} image={"https://complex-houses.surge.sh/4b48a72f-40e4-4110-a90f-15319b22814f/zoom-minus.png"} disabled={false} /> 
                       </div>
                       <div className="topbar-3-0-0-11" /> 
                       <div className="topbar-3-0-0-12">
@@ -1094,13 +1094,13 @@ module.exports = Topbar = createReactClass {
                       <div className="topbar-rectangle_1">
                           <div className="topbar-4-0-0-0-0">
                               <div className="topbar-topbarbutton_instance_7">
-                                  <Topbarbutton state={"A"} text={"Choose Left"} onClick={(@props.editor.chooseLeft)} image={"https://ucarecdn.com/368d9d5e-4107-4e76-b466-dde635be1a1a/"} disabled={false} /> 
+                                  <Topbarbutton state={"A"} text={"Choose Left"} onClick={(@props.editor.chooseLeft)} image={"https://complex-houses.surge.sh/368d9d5e-4107-4e76-b466-dde635be1a1a/118739.svg"} disabled={false} /> 
                               </div>
                               <div className="topbar-topbarbutton_instance_7-4">
-                                  <Topbarbutton state={"A"} text={"Choose Right"} onClick={(@props.editor.chooseRight)} image={"https://ucarecdn.com/a3ff854e-d14c-44c1-af63-5ef71235dbf1/"} disabled={false} /> 
+                                  <Topbarbutton state={"A"} text={"Choose Right"} onClick={(@props.editor.chooseRight)} image={"https://complex-houses.surge.sh/a3ff854e-d14c-44c1-af63-5ef71235dbf1/126490.svg"} disabled={false} /> 
                               </div>
                               <div className="topbar-topbarbutton_instance_7-8">
-                                  <Topbarbutton state={"A"} text={"Abort Merge"} onClick={(@props.editor.abort)} image={"https://ucarecdn.com/5b0f0c48-acdc-40bf-a287-e81b4eb37520/"} disabled={false} /> 
+                                  <Topbarbutton state={"A"} text={"Abort Merge"} onClick={(@props.editor.abort)} image={"https://complex-houses.surge.sh/5b0f0c48-acdc-40bf-a287-e81b4eb37520/cancel-512.png"} disabled={false} /> 
                               </div>
                           </div>
                       </div>
@@ -1118,29 +1118,29 @@ module.exports = Topbar = createReactClass {
                       </div>
                       <div className="topbar-5-0-0-1" /> 
                       <div className="topbar-topbarbutton-49">
-                          <Topbarbutton state={"A"} text={"Shortcuts"} onClick={(@props.editor.handleShortcuts)} image={"https://ucarecdn.com/646bf1f4-d2b8-4697-ba79-6a40b45dd223/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Shortcuts"} onClick={(@props.editor.handleShortcuts)} image={"https://complex-houses.surge.sh/646bf1f4-d2b8-4697-ba79-6a40b45dd223/icons2 copy 4.png"} disabled={false} /> 
                       </div>
                       <div className="topbar-5-0-0-3" /> 
                       <div className="topbar-topbarbutton-32">
-                          <Topbarbutton state={"A"} text={"Make Reusable"} onClick={(@props.editor.handleNewComponent)} image={"https://ucarecdn.com/1d46e25f-2b59-47c9-8f1d-9b6de444386a/"} disabled={(@props.editor.getSelectedBlocks().length == 0)} /> 
+                          <Topbarbutton state={"A"} text={"Make Reusable"} onClick={(@props.editor.handleNewComponent)} image={"https://complex-houses.surge.sh/1d46e25f-2b59-47c9-8f1d-9b6de444386a/simple-gear.png"} disabled={(@props.editor.getSelectedBlocks().length == 0)} /> 
                       </div>
                       <div className="topbar-5-0-0-5" /> 
                       <div className="topbar-topbarbutton_instance_9">
-                          <Topbarbutton state={"A"} text={"Make Multistate"} onClick={(@props.editor.handleMakeMultistate)} image={"https://ucarecdn.com/874818bf-3f3b-4928-835b-061218fc26bf/"} disabled={(@props.editor.getSelectedBlocks().length == 0)} /> 
+                          <Topbarbutton state={"A"} text={"Make Multistate"} onClick={(@props.editor.handleMakeMultistate)} image={"https://complex-houses.surge.sh/874818bf-3f3b-4928-835b-061218fc26bf/wildcard3.png"} disabled={(@props.editor.getSelectedBlocks().length == 0)} /> 
                       </div>
                       <div className="topbar-topbarbutton-2">
-                          <Topbarbutton state={"A"} text={"Sync Code"} onClick={(@props.editor.handleExport)} image={"https://ucarecdn.com/54591ad3-7fea-4d20-aa86-f238ca03aeac/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Sync Code"} onClick={(@props.editor.handleExport)} image={"https://complex-houses.surge.sh/54591ad3-7fea-4d20-aa86-f238ca03aeac/icons2 copy.png"} disabled={false} /> 
                       </div>
                       <div className="topbar-5-0-0-8" /> 
                       <div className="topbar-topbarbutton_instance_11-4">
-                          <Topbarbutton state={"A"} text={"Preview"} onClick={(@props.editor.handlePlay)} image={"https://ucarecdn.com/96f40588-00f2-453a-89b8-6df4287ab39a/"} disabled={(not @props.editor.topbarPlayButtonIsEnabled())} /> 
+                          <Topbarbutton state={"A"} text={"Preview"} onClick={(@props.editor.handlePlay)} image={"https://complex-houses.surge.sh/96f40588-00f2-453a-89b8-6df4287ab39a/play-button.svg"} disabled={(not @props.editor.topbarPlayButtonIsEnabled())} /> 
                       </div>
                       <div className="topbar-5-0-0-10" /> 
                       <div className="topbar-topbarbutton-15">
-                          <Topbarbutton state={"A"} text={"Zoom In"} onClick={(@props.editor.viewportManager.handleZoomIn)} image={"https://ucarecdn.com/9a3fa941-ba37-4bcf-b071-6e4ff0e5a66d/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Zoom In"} onClick={(@props.editor.viewportManager.handleZoomIn)} image={"https://complex-houses.surge.sh/9a3fa941-ba37-4bcf-b071-6e4ff0e5a66d/zoom-plus.png"} disabled={false} /> 
                       </div>
                       <div className="topbar-topbarbutton-6">
-                          <Topbarbutton state={"A"} text={"Zoom Out"} onClick={(@props.editor.viewportManager.handleZoomOut)} image={"https://ucarecdn.com/4b48a72f-40e4-4110-a90f-15319b22814f/"} disabled={false} /> 
+                          <Topbarbutton state={"A"} text={"Zoom Out"} onClick={(@props.editor.viewportManager.handleZoomOut)} image={"https://complex-houses.surge.sh/4b48a72f-40e4-4110-a90f-15319b22814f/zoom-minus.png"} disabled={false} /> 
                       </div>
                       <div className="topbar-5-0-0-13" /> 
                       <div className="topbar-5-0-0-14">

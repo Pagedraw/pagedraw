@@ -96,7 +96,7 @@ render = ->
                 width: 18px;
                 height: 18px;
                 flex-shrink: 0;
-                background-image: url('https://ucarecdn.com/897c35eb-bf13-400d-b293-7acb6f8899af/');
+                background-image: url('https://complex-houses.surge.sh/897c35eb-bf13-400d-b293-7acb6f8899af/original');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -362,7 +362,7 @@ render = ->
                 width: 18px;
                 height: 18px;
                 flex-shrink: 0;
-                background-image: url('https://ucarecdn.com/897c35eb-bf13-400d-b293-7acb6f8899af/');
+                background-image: url('https://complex-houses.surge.sh/897c35eb-bf13-400d-b293-7acb6f8899af/original');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -656,7 +656,7 @@ render = ->
                             { if (@props.repository? and @props.repository != '')
                                 <div className="publiclibrary-rectangle_12">
                                     <div className="publiclibrary-0-0-0-0-1-0-0-0">
-                                        <img src="https://ucarecdn.com/9e6b5270-cc68-4e0c-bcab-ec5653a3703b/" className="publiclibrary-image-6" /> 
+                                        <img src="https://complex-houses.surge.sh/9e6b5270-cc68-4e0c-bcab-ec5653a3703b/original" className="publiclibrary-image-6" /> 
                                         <div className="publiclibrary-0-0-0-0-1-0-0-0-1">
                                             <div className="publiclibrary-0-0-0-0-1-0-0-0-1-0">
                                                 <div className="publiclibrary-github_com_pagedraw_pd_-1">
@@ -722,7 +722,7 @@ render = ->
                         { if (@props.repository? and @props.repository != '')
                             <div className="publiclibrary-rectangle_12-5">
                                 <div className="publiclibrary-1-0-0-1-0-0-0">
-                                    <img src="https://ucarecdn.com/9e6b5270-cc68-4e0c-bcab-ec5653a3703b/" className="publiclibrary-image-7" /> 
+                                    <img src="https://complex-houses.surge.sh/9e6b5270-cc68-4e0c-bcab-ec5653a3703b/original" className="publiclibrary-image-7" /> 
                                     <div className="publiclibrary-1-0-0-1-0-0-0-1">
                                         <div className="publiclibrary-1-0-0-1-0-0-0-1-0">
                                             <div className="publiclibrary-github_com_pagedraw_pd_-9">
