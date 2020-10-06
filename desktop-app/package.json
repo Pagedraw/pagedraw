@@ -1,11 +1,14 @@
 {
   "name": "Pagedraw",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pagedraw",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder"
+  },
+  "engines": {
+    "node": "10.11.0"
   },
   "repository": "https://github.com/Pagedraw/pagedraw",
   "keywords": [],
@@ -13,7 +16,7 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^4.0.1",
-    "electron-builder": "^20.38.4"
+    "electron-builder": "^22.8.1"
   },
   "build": {
     "appId": "io.pagedraw.editor",
