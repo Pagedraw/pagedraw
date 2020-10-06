@@ -227,7 +227,12 @@ exports.Editor = Editor = createReactClass
                     )} />
             })}
 
-            <div style={display: 'flex', flex: 1, flexDirection: 'row'}>
+            <div style={
+                display: 'flex', flex: 1, flexDirection: 'row',
+                # there's some absolute monstrocity that makes this necessary, but it seems to work.
+                # the topbar is 59px, so everything else is 100% - 59
+                height: 'calc(100% - 59px)'
+            }>
                 { if config.layerList
                     shadowDom({
                         wrapper: (content) =>
