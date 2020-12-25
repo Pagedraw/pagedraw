@@ -12,7 +12,7 @@ Here is a [blog post](https://medium.com/@gabriel_20625/technical-lessons-from-b
 
 Download the final release at [https://github.com/Pagedraw/pagedraw/releases/download/1.0.1/Pagedraw-1.0.1.dmg](https://github.com/Pagedraw/pagedraw/releases/download/1.0.1/Pagedraw-1.0.1.dmg).
 
-Clone [https://github.com/pagedraw/sample-app](https://github.com/pagedraw/sample-app) and use it as the scaffolding for your app.  It's based on create-react-app; all very standard.  You'll want to do the ususal `yarn` to install dependencies.
+Clone [https://github.com/pagedraw/sample-app](https://github.com/pagedraw/sample-app) and use it as the scaffolding for your app.  It's based on create-react-app; all very standard.  You'll want to do the usual `yarn` to install dependencies.
 
 Open the Pagedraw app, which will ask you to pick a file.  Pick `sample-app/main.pagedraw.json` to open.
 
