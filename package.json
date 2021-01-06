@@ -90,7 +90,7 @@
     "hopscotch": "0.3.1",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
-    "jquery": "2.1.4",
+    "jquery": "3.5.0",
     "js-yaml": "3.6.1",
     "json-hash": "1.2.0",
     "jsondiffpatch": "0.3.10",
