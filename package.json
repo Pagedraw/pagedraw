@@ -120,7 +120,7 @@
     "react-autosuggest": "9.3.4",
     "react-bootstrap": "0.31.2",
     "react-color": "2.13.5",
-    "react-dev-utils": "5.0.0",
+    "react-dev-utils": "11.0.4",
     "react-dom": "16.4.1",
     "react-dropzone": "4.2.13",
     "react-flip-move": "3.0.2",
