@@ -37,7 +37,7 @@
     "firebase": "4.0.0",
     "fs-readdir-recursive": "1.1.0",
     "interpret": "1.1.0",
-    "lodash": "4.17.4",
+    "lodash": "4.17.21",
     "memfs": "2.9.4",
     "memory-fs": "0.4.1",
     "mime-types": "2.1.19",
