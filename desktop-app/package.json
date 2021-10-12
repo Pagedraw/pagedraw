@@ -15,7 +15,7 @@
   "author": "Pagedraw",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^4.0.1",
+    "electron": "^11.5.0",
     "electron-builder": "^22.8.1"
   },
   "build": {
