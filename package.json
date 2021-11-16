@@ -43,7 +43,7 @@
     "async": "2.5.0",
     "atob": "2.0.3",
     "autoprefixer": "7.1.6",
-    "aws-sdk": "2.100.0",
+    "aws-sdk": "2.814.0",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
