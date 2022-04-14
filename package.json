@@ -40,7 +40,7 @@
     "handlebars": "^4.7.6",
     "@blueprintjs/core": "2.3.1",
     "@stackblitz/sdk": "1.0.0",
-    "async": "2.5.0",
+    "async": "3.2.2",
     "atob": "2.0.3",
     "autoprefixer": "7.1.6",
     "aws-sdk": "2.100.0",
