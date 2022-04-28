@@ -338,10 +338,10 @@ async-each@^1.0.0:
   resolved "https://registry.yarnpkg.com/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
 
 async@^2.0.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/async/-/async-2.6.1.tgz#b245a23ca71930044ec53fa46aa00a3e87c6a610"
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.6.4.tgz#706b7ff6084664cd7eae713f6f965433b5504221"
   dependencies:
-    lodash "^4.17.10"
+    lodash "^4.17.14"
 
 atob@^2.1.1:
   version "2.1.1"
@@ -2722,9 +2722,9 @@ lodash@4.17.4:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
-lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.4:
-  version "4.17.10"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
+lodash@^4.13.1, lodash@^4.17.14, lodash@^4.17.4:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
 
 log-symbols@^2.1.0:
   version "2.2.0"
